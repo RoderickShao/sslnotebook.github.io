@@ -1,0 +1,1062 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Chapter%202/">
+      
+      
+        <link rel="next" href="../Chapter%204/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Chapter 3 - RoderickShao's NoteBook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="RoderickShao&#39;s NoteBook" class="md-header__button md-logo" aria-label="RoderickShao's NoteBook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RoderickShao's NoteBook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="RoderickShao&#39;s NoteBook" class="md-nav__button md-logo" aria-label="RoderickShao's NoteBook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    RoderickShao's NoteBook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数字逻辑设计
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            数字逻辑设计
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      评判一个电路的复杂性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="评判一个电路的复杂性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      例子
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      优化方法（K-Maps）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="优化方法（K-Maps）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      例子
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k-maps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      三维K-maps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-maps_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      四维K-Maps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见错误
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont-cares" class="md-nav__link">
+    <span class="md-ellipsis">
+      无关项（Don't cares)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他门介绍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他门介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      与非门
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      或非门
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      异或门与同或门
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="异或门与同或门">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      扩展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buffer （缓冲门）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Buffer （缓冲门）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      三态缓冲器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他复杂门
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      评判一个电路的复杂性
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="评判一个电路的复杂性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      标准
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      例子
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      优化方法（K-Maps）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="优化方法（K-Maps）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      例子
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例子">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k-maps_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      三维K-maps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-maps_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      四维K-Maps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见错误
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dont-cares" class="md-nav__link">
+    <span class="md-ellipsis">
+      无关项（Don't cares)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他门介绍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他门介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      与非门
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      或非门
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      异或门与同或门
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="异或门与同或门">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      扩展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Buffer （缓冲门）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Buffer （缓冲门）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      特点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      作用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      三态缓冲器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他复杂门
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1"><strong>电路的优化</strong></h1>
+<h2 id="_2"><strong>评判一个电路的复杂性</strong></h2>
+<h3 id="_3"><strong>标准</strong></h3>
+<ul>
+<li>Literal cost</li>
+<li>Gate input cost</li>
+<li>Gate input cost with NOTs</li>
+</ul>
+<p><strong>Literal Cost</strong></p>
+<p>出现变量的个数（重复的也计算在内）</p>
+<p>缺点：只评价了第一层的电路数量</p>
+<p><strong>Gate Input Cost（门输入代价）</strong></p>
+<p>输入给逻辑门的总和</p>
+<p><strong>Gate input cost with NOTs</strong></p>
+<p>加上了非门（重复的算一个）</p>
+<h3 id="_4"><strong>例子</strong></h3>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204148.jpg" /></p>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204937.jpg" /></p>
+<p>（G=10）</p>
+<h2 id="k-maps"><strong>优化方法（K-Maps）</strong></h2>
+<p>直观的方法：对规范形式使用minimization theorem(最小化定理)</p>
+<p>更进一步引入工具：K-Map</p>
+<h3 id="_5"><strong>特点</strong></h3>
+<ul>
+<li>
+<p>表格每个方块代表最小项与最大项</p>
+</li>
+<li>
+<p>将真值表转换成二维表</p>
+</li>
+<li>
+<p>相邻的格子中仅有一个变量是不同的（按照格雷码排布）</p>
+</li>
+</ul>
+<h3 id="_6"><strong>步骤</strong></h3>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705211333.jpg" /></p>
+<p>两个变量的格雷码编排：00 01 11 10（注意头尾也是<strong>相邻</strong>的）</p>
+<p>在K-Map中存在交叉的时候，复制一下就行</p>
+<h3 id="_7"><strong>例子</strong></h3>
+<h4 id="k-maps_1">三维K-maps</h4>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212913.jpg" /></p>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212917.jpg" /></p>
+<p>（注意一下例子中xyz的标注方式）</p>
+<p>技巧：观察不变量（上面这个例子就是Y）</p>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705213944.jpg" /></p>
+<h4 id="k-maps_2">四维K-Maps</h4>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705214545.jpg" /></p>
+<p>注意数字的排布</p>
+<h3 id="_8"><strong>常见错误</strong></h3>
+<ul>
+<li>只能圈1</li>
+<li>贪心地圈</li>
+<li>圈只能圈<span class="arithmatex">\(2^n\)</span>个，不能圈3，5个（去掉1个变量圈两个，去掉2个变量圈4个，去掉n个圈<span class="arithmatex">\(2^n\)</span>个）</li>
+</ul>
+<h3 id="dont-cares"><strong>无关项（Don't cares)</strong></h3>
+<p>有些输入不可能出现，比如BCD码中只有0~9被使用，其他的就是无关项，这些项可0可1，所以就可以获得更多的优化机会。</p>
+<p><strong>例1</strong></p>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706141723.jpg" /></p>
+<p>X取合适的0和1进行优化</p>
+<p><strong>例2</strong>（独热码（one-hot)与一般二进制编码的比较）</p>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706142232.jpg" /></p>
+<p>独热码读取最小项时可以直接读特征项，比如说F1直接读Z，F2直接读Y+X，但这样就少了最小项之间可能存在的优化机会。</p>
+<p>编码稀疏，优化机会可能更多，减少门输入代价</p>
+<h3 id="_9"><strong>算法</strong></h3>
+<p>蕴含项（implicant)：就是SOP中的每项积以及POS中的每项和
+可分为：Prime Implicant and Essential Prime Implicant</p>
+<ul>
+<li>Prime Implicant（主蕴含项）：包含尽可能多的相邻项，且是$ 2^n $个</li>
+<li>Essential Prime Implicant（基本主蕴含项）：包含特殊蕴含项，可能没有（比如说循环的K-maps）【必选】</li>
+</ul>
+<p><strong>Quien McCluskey 算法</strong>
+1. 找到所有主蕴含项
+2. 包含进所有基本主蕴含项
+3. 挑选尽可能少的非基本主蕴含项去包含所有最小项</p>
+<p><strong>多层电路优化</strong>（提取公因式，不一定会减少）</p>
+<h3 id="_10"><strong>总结</strong></h3>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706194845.jpg" /></p>
+<h2 id="_11"><strong>其他门介绍</strong></h2>
+<h3 id="_12"><strong>与非门</strong></h3>
+<p>特点：直接用摩丝管做出来，是Universal Gate。但是代数特性不行（不满足结合律）</p>
+<h3 id="_13"><strong>或非门</strong></h3>
+<p>同上</p>
+<h3 id="_14"><strong>异或门与同或门</strong></h3>
+<h4 id="_15">特点</h4>
+<p>非万能门，但是有较好代数特性</p>
+<p><span class="arithmatex">\(X \bigoplus Y = X \overline Y + \overline XY\)</span></p>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706201347.jpg" /></p>
+<p>有趣的题目：怎么找出数组中唯一的一个出现一次的数，其他的数均出现两次（直接将所有元素做异或运算）<span class="arithmatex">\(X \bigoplus 0 =X\)</span>       <span class="arithmatex">\(X \bigoplus X =0\)</span></p>
+<h4 id="_16">扩展</h4>
+<p>若变量数大于2个，名字被替换为<strong>奇函数</strong>与<strong>偶函数</strong>（对输入的1的奇偶进行判断）【西洋棋盘形式】</p>
+<p>应用价值：产生校验位</p>
+<h3 id="buffer"><strong>Buffer （缓冲门）</strong></h3>
+<h4 id="_17"><strong>特点</strong></h4>
+<p>进来什么就出去什么</p>
+<h4 id="_18"><strong>作用</strong></h4>
+<ol>
+<li>增加信号强度与速度</li>
+<li>多个电路的信号输入一个门，需要一个buffer（0/1竞争问题造成短路）</li>
+</ol>
+<h4 id="_19"><strong>三态缓冲器</strong></h4>
+<p>多了一个控制信号</p>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203158.jpg" /></p>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203501.jpg" /></p>
+<p><strong>不能出现两个三态门同时打开</strong></p>
+<h3 id="_20"><strong>其他复杂门</strong></h3>
+<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203948.jpg" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../../static/mathjax/localization.js"></script>
+      
+        <script src="../../static/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
