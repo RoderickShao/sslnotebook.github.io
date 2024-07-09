@@ -427,6 +427,15 @@
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
+      工艺映射
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
       函数模块
     </span>
   </a>
@@ -435,9 +444,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       基本逻辑函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      译码器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      编码器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      多路选择器
     </span>
   </a>
   
@@ -589,6 +625,15 @@
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
+      工艺映射
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
       函数模块
     </span>
   </a>
@@ -597,9 +642,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       基本逻辑函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      译码器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      编码器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      多路选择器
     </span>
   </a>
   
@@ -681,11 +753,83 @@
 <p>解决方案：加滤波器，或者加产生毛刺的冗余项。</p>
 <p>例如：在下面这个例子中，毛刺是在AB均是1，S由1到0的时候产生，那么我们在原先的式子中加上AB即可消除毛刺。</p>
 <p><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707142739.jpg" /></p>
-<h3 id="_8"><strong>函数模块</strong></h3>
-<h4 id="_9">基本逻辑函数</h4>
-<p>定值函数：F=0 or F=1</p>
-<p>传输函数：F=X</p>
-<p>逆变函数：F=<span class="arithmatex">\(\overline X\)</span></p>
+<h3 id="_8">工艺映射</h3>
+<p>已知布尔函数找到合适的门电路完成工艺</p>
+<p><strong>元器件库</strong>，包括了图例、面积、负载、延迟时间等等</p>
+<p>例子：将电路映射到与非门上</p>
+<ol>
+<li>
+<p>将与门与或门用与非门替换</p>
+</li>
+<li>
+<p>作优化（非门串联的合并或者并联的一分多）</p>
+</li>
+</ol>
+<p><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709155219.jpg" /></p>
+<h3 id="_9"><strong>函数模块</strong></h3>
+<h4 id="_10">基本逻辑函数</h4>
+<p>定值函数：<span class="arithmatex">\(F=0\)</span> or <span class="arithmatex">\(F=1\)</span></p>
+<p>传输函数：<span class="arithmatex">\(F=X\)</span></p>
+<p>逆变函数：<span class="arithmatex">\(F=\overline X\)</span></p>
+<p>使能函数：信号源有一个使能信号，一个是传输信号</p>
+<ul>
+<li>
+<p>一种是与使能：<span class="arithmatex">\(F=X\cdot EN\)</span> </p>
+</li>
+<li>
+<p>另一种是或使能：<span class="arithmatex">\(F =X+\overline{EN}\)</span> </p>
+</li>
+</ul>
+<p>就是让EN为1使输出信号与输入信号相同，为0时，让输出恒为0（与）或1（或）</p>
+<p>与三态门作区别：三态门的使能引脚是放在中间的，是控制的而不是信号源。同时三态门还有一个高阻状态（切断），而使能函数则是恒输出0/1</p>
+<h4 id="_11">译码器</h4>
+<p>译码器：输入n个，输出m个（<span class="arithmatex">\(n\leq m \leq 2^n\)</span>)</p>
+<p><strong>自顶向下设计译码器</strong></p>
+<p>1-2译码器</p>
+<p>2-4译码器：由两个1-2译码器与4个与门构成的（分解的思想）</p>
+<p>当译码器变得更大时，只是使用n个1-2译码器与<span class="arithmatex">\(2^n\)</span>个与门，会造成扇入与GN暴增。</p>
+<p>解决方法：层次性设计，比如说8-256分解成两个4-16和一个与门。</p>
+<p><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707192847.jpg" /></p>
+<p>这样的一个6-64译码器GN=182，而原先的方案需要390个。</p>
+<p>同时译码器还可以加一个使能端EN，EN为1使与原先一样，为0时全为0.</p>
+<p>如果将使能端与信号源互换位置，就可以做一个信号分离器（本质就是译码器）</p>
+<p><strong>自底向上设计3-8译码器</strong></p>
+<p><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707193858.jpg" /></p>
+<p>译码器应用：加法器、显示器……</p>
+<h4 id="_12">编码器</h4>
+<p>编码器：译码器的反过程，输入m个，输出n个（<span class="arithmatex">\(n\leq m \leq 2^n\)</span>)</p>
+<p>一些常用的编码器：</p>
+<ol>
+<li>
+<p>One-Hot to binary code （优势：快速读取次优结果，读特征位）<img alt="" src="E:\邵圣乐\Mysite\docs\数字逻辑设计\image\chapter 4\微信图片_20240709162041.jpg" /></p>
+</li>
+<li>
+<p>Decimal-to-BCD encoder（1的特例）</p>
+</li>
+<li>
+<p>Priority encoder(只反应最高优先级的那个1)<img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709162545.jpg" /></p>
+</li>
+</ol>
+<p>怎么读次优解？</p>
+<p>读确定量，如Y1就读<span class="arithmatex">\(D3+\overline {D3}D2\)</span>，V读<span class="arithmatex">\(D3+D2+D1+D0\)</span></p>
+<h4 id="_13">多路选择器</h4>
+<p>两种构成方法：译码器+AND-OR gates 和 三态缓冲器</p>
+<p>基本构成：<span class="arithmatex">\(2^n\)</span>个输入，n个选择，1个输出</p>
+<p>第一种：译码器提供有效信号，然后提供给与门的使能端，然后再通过或门</p>
+<p><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709175154.jpg" /></p>
+<p>输入源规模扩展：注意最后or门会超出fan-in的限额</p>
+<p>输入源本身的扩展，输入向量：对每一位分别作与或电路，译码信号共享</p>
+<p>第二种：</p>
+<ul>
+<li>与或电路用三态门替代，使能端链接译码信号，并且可以直接连到一个路上，不需要或门（少了门输入代价）</li>
+</ul>
+<p><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709193953.jpg" /></p>
+<p>GN=18</p>
+<ul>
+<li>作多次选择</li>
+</ul>
+<p><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709193957.jpg" /></p>
+<p>​       GN=16</p>
 
 
 
@@ -737,9 +881,9 @@
     
       <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
-        <script src="../../static/mathjax/localization.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
-        <script src="../../static/mathjax/es5/tex-mml-chtml.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
