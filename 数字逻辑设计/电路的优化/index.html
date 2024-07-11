@@ -6,13 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="RoderickShao's NoteBook">
       
       
       
-        <link rel="prev" href="../Chapter%202/">
+      
+        <link rel="prev" href="../%E9%80%BB%E8%BE%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/">
       
       
-        <link rel="next" href="../Chapter%204/">
+        <link rel="next" href="../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF%EF%BC%89/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,13 +22,54 @@
     
     
       
-        <title>Chapter 3 - RoderickShao's NoteBook</title>
+        <title>2 电路的优化 - RoderickShao's NoteBook</title>
       
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
       
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.484 4.484 0 0 1-.563-1.191 3.835 3.835 0 0 1-.05-2.063 4.647 4.647 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .748.748 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.425 2.425 0 0 1-.507-.441 3.075 3.075 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.884.884 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.737 3.737 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75Z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06Zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0Z"/></svg>');}</style>
+
 
 
     
@@ -50,7 +93,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     <body dir="ltr">
@@ -98,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter 3
+              2 电路的优化
             
           </span>
         </div>
@@ -110,43 +162,18 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
+      <div class="md-header__source">
+        <a href="https://github.com/RoderickShao/sslnotebook.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sslnotebook.github.io
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -181,6 +208,18 @@
     </a>
     RoderickShao's NoteBook
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RoderickShao/sslnotebook.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sslnotebook.github.io
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -248,11 +287,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Chapter%202/" class="md-nav__link">
+      <a href="../%E9%80%BB%E8%BE%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Chapter 2
+    1 逻辑计算与布尔代数
   </span>
   
 
@@ -282,7 +321,7 @@
           
   
   <span class="md-ellipsis">
-    Chapter 3
+    2 电路的优化
   </span>
   
 
@@ -293,7 +332,7 @@
         
   
   <span class="md-ellipsis">
-    Chapter 3
+    2 电路的优化
   </span>
   
 
@@ -582,11 +621,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Chapter%204/" class="md-nav__link">
+      <a href="../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF%EF%BC%89/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Chapter 4
+    3 数字电路设计（组合电路）
   </span>
   
 
@@ -895,10 +934,13 @@
                 
                   
 
+  
+  
 
-<h1 id="_1"><strong>电路的优化</strong></h1>
-<h2 id="_2"><strong>评判一个电路的复杂性</strong></h2>
-<h3 id="_3"><strong>标准</strong></h3>
+
+<h1 id="_1"><strong>电路的优化</strong><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2"><strong>评判一个电路的复杂性</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3"><strong>标准</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Literal cost</li>
 <li>Gate input cost</li>
@@ -911,14 +953,14 @@
 <p>输入给逻辑门的总和</p>
 <p><strong>Gate input cost with NOTs</strong></p>
 <p>加上了非门（重复的算一个）</p>
-<h3 id="_4"><strong>例子</strong></h3>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204148.jpg" /></p>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204937.jpg" /></p>
+<h3 id="_4"><strong>例子</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204148.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204148.jpg" /></a></p>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204937.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204937.jpg" /></a></p>
 <p>（G=10）</p>
-<h2 id="k-maps"><strong>优化方法（K-Maps）</strong></h2>
+<h2 id="k-maps"><strong>优化方法（K-Maps）</strong><a class="headerlink" href="#k-maps" title="Permanent link">&para;</a></h2>
 <p>直观的方法：对规范形式使用minimization theorem(最小化定理)</p>
 <p>更进一步引入工具：K-Map</p>
-<h3 id="_5"><strong>特点</strong></h3>
+<h3 id="_5"><strong>特点</strong><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>表格每个方块代表最小项与最大项</p>
@@ -930,36 +972,36 @@
 <p>相邻的格子中仅有一个变量是不同的（按照格雷码排布）</p>
 </li>
 </ul>
-<h3 id="_6"><strong>步骤</strong></h3>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705211333.jpg" /></p>
+<h3 id="_6"><strong>步骤</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705211333.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705211333.jpg" /></a></p>
 <p>两个变量的格雷码编排：00 01 11 10（注意头尾也是<strong>相邻</strong>的）</p>
 <p>在K-Map中存在交叉的时候，复制一下就行</p>
-<h3 id="_7"><strong>例子</strong></h3>
-<h4 id="k-maps_1">三维K-maps</h4>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212913.jpg" /></p>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212917.jpg" /></p>
+<h3 id="_7"><strong>例子</strong><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h4 id="k-maps_1">三维K-maps<a class="headerlink" href="#k-maps_1" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212913.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212913.jpg" /></a></p>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212917.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212917.jpg" /></a></p>
 <p>（注意一下例子中xyz的标注方式）</p>
 <p>技巧：观察不变量（上面这个例子就是Y）</p>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705213944.jpg" /></p>
-<h4 id="k-maps_2">四维K-Maps</h4>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705214545.jpg" /></p>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705213944.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705213944.jpg" /></a></p>
+<h4 id="k-maps_2">四维K-Maps<a class="headerlink" href="#k-maps_2" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705214545.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705214545.jpg" /></a></p>
 <p>注意数字的排布</p>
-<h3 id="_8"><strong>常见错误</strong></h3>
+<h3 id="_8"><strong>常见错误</strong><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <ul>
 <li>只能圈1</li>
 <li>贪心地圈</li>
 <li>圈只能圈<span class="arithmatex">\(2^n\)</span>个，不能圈3，5个（去掉1个变量圈两个，去掉2个变量圈4个，去掉n个圈<span class="arithmatex">\(2^n\)</span>个）</li>
 </ul>
-<h3 id="dont-cares"><strong>无关项（Don't cares)</strong></h3>
+<h3 id="dont-cares"><strong>无关项（Don't cares)</strong><a class="headerlink" href="#dont-cares" title="Permanent link">&para;</a></h3>
 <p>有些输入不可能出现，比如BCD码中只有0~9被使用，其他的就是无关项，这些项可0可1，所以就可以获得更多的优化机会。</p>
 <p><strong>例1</strong></p>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706141723.jpg" /></p>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706141723.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706141723.jpg" /></a></p>
 <p>X取合适的0和1进行优化</p>
 <p><strong>例2</strong>（独热码（one-hot)与一般二进制编码的比较）</p>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706142232.jpg" /></p>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706142232.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706142232.jpg" /></a></p>
 <p>独热码读取最小项时可以直接读特征项，比如说F1直接读Z，F2直接读Y+X，但这样就少了最小项之间可能存在的优化机会。</p>
 <p>编码稀疏，优化机会可能更多，减少门输入代价</p>
-<h3 id="_9"><strong>算法</strong></h3>
+<h3 id="_9"><strong>算法</strong><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>蕴含项（implicant)：就是SOP中的每项积以及POS中的每项和
 可分为：Prime Implicant and Essential Prime Implicant</p>
 <ul>
@@ -971,37 +1013,37 @@
 2. 包含进所有基本主蕴含项
 3. 挑选尽可能少的非基本主蕴含项去包含所有最小项</p>
 <p><strong>多层电路优化</strong>（提取公因式，不一定会减少）</p>
-<h3 id="_10"><strong>总结</strong></h3>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706194845.jpg" /></p>
-<h2 id="_11"><strong>其他门介绍</strong></h2>
-<h3 id="_12"><strong>与非门</strong></h3>
+<h3 id="_10"><strong>总结</strong><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706194845.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706194845.jpg" /></a></p>
+<h2 id="_11"><strong>其他门介绍</strong><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h3 id="_12"><strong>与非门</strong><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <p>特点：直接用摩丝管做出来，是Universal Gate。但是代数特性不行（不满足结合律）</p>
-<h3 id="_13"><strong>或非门</strong></h3>
+<h3 id="_13"><strong>或非门</strong><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <p>同上</p>
-<h3 id="_14"><strong>异或门与同或门</strong></h3>
-<h4 id="_15">特点</h4>
+<h3 id="_14"><strong>异或门与同或门</strong><a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<h4 id="_15">特点<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p>非万能门，但是有较好代数特性</p>
 <p><span class="arithmatex">\(X \bigoplus Y = X \overline Y + \overline XY\)</span></p>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706201347.jpg" /></p>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706201347.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706201347.jpg" /></a></p>
 <p>有趣的题目：怎么找出数组中唯一的一个出现一次的数，其他的数均出现两次（直接将所有元素做异或运算）<span class="arithmatex">\(X \bigoplus 0 =X\)</span>       <span class="arithmatex">\(X \bigoplus X =0\)</span></p>
-<h4 id="_16">扩展</h4>
+<h4 id="_16">扩展<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
 <p>若变量数大于2个，名字被替换为<strong>奇函数</strong>与<strong>偶函数</strong>（对输入的1的奇偶进行判断）【西洋棋盘形式】</p>
 <p>应用价值：产生校验位</p>
-<h3 id="buffer"><strong>Buffer （缓冲门）</strong></h3>
-<h4 id="_17"><strong>特点</strong></h4>
+<h3 id="buffer"><strong>Buffer （缓冲门）</strong><a class="headerlink" href="#buffer" title="Permanent link">&para;</a></h3>
+<h4 id="_17"><strong>特点</strong><a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
 <p>进来什么就出去什么</p>
-<h4 id="_18"><strong>作用</strong></h4>
+<h4 id="_18"><strong>作用</strong><a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <ol>
 <li>增加信号强度与速度</li>
 <li>多个电路的信号输入一个门，需要一个buffer（0/1竞争问题造成短路）</li>
 </ol>
-<h4 id="_19"><strong>三态缓冲器</strong></h4>
+<h4 id="_19"><strong>三态缓冲器</strong><a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
 <p>多了一个控制信号</p>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203158.jpg" /></p>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203501.jpg" /></p>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203158.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203158.jpg" /></a></p>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203501.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203501.jpg" /></a></p>
 <p><strong>不能出现两个三态门同时打开</strong></p>
-<h3 id="_20"><strong>其他复杂门</strong></h3>
-<p><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203948.jpg" /></p>
+<h3 id="_20"><strong>其他复杂门</strong><a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203948.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203948.jpg" /></a></p>
 
 
 
@@ -1058,5 +1100,7 @@
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
