@@ -11,10 +11,8 @@
       
       
       
-        <link rel="prev" href="../%E9%80%BB%E8%BE%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/">
+        <link rel="prev" href="../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF%EF%BC%89/">
       
-      
-        <link rel="next" href="../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF%EF%BC%89/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>2 电路的优化 - RoderickShao's NoteBook</title>
+        <title>4 数字电路设计（时序电路） - RoderickShao's NoteBook</title>
       
     
     
@@ -150,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2 电路的优化
+              4 数字电路设计（时序电路）
             
           </span>
         </div>
@@ -305,30 +303,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    2 电路的优化
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../%E7%94%B5%E8%B7%AF%E7%9A%84%E4%BC%98%E5%8C%96/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -337,278 +315,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      评判一个电路的复杂性
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="评判一个电路的复杂性">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      标准
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      例子
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#k-maps" class="md-nav__link">
-    <span class="md-ellipsis">
-      优化方法（K-Maps）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="优化方法（K-Maps）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      特点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      步骤
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      例子
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="例子">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#k-maps_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      三维K-maps
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#k-maps_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      四维K-Maps
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      常见错误
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dont-cares" class="md-nav__link">
-    <span class="md-ellipsis">
-      无关项（Don't cares)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      算法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      总结
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      其他门介绍
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="其他门介绍">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      与非门
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      或非门
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      异或门与同或门
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="异或门与同或门">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      特点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      扩展
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#buffer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Buffer （缓冲门）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Buffer （缓冲门）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    <span class="md-ellipsis">
-      特点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    <span class="md-ellipsis">
-      作用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
-    <span class="md-ellipsis">
-      三态缓冲器
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    <span class="md-ellipsis">
-      其他复杂门
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -639,10 +345,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1%EF%BC%88%E6%97%B6%E5%BA%8F%E7%94%B5%E8%B7%AF%EF%BC%89/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4 数字电路设计（时序电路）
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -651,6 +377,83 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#part-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1 存储单元与分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1 存储单元与分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见存储单元
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见存储单元">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#latches" class="md-nav__link">
+    <span class="md-ellipsis">
+      锁存器(Latches)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-flops" class="md-nav__link">
+    <span class="md-ellipsis">
+      触发器(Flip-Flops)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      时序电路分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -690,247 +493,52 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#part-1" class="md-nav__link">
     <span class="md-ellipsis">
-      评判一个电路的复杂性
+      Part 1 存储单元与分析
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="评判一个电路的复杂性">
+    <nav class="md-nav" aria-label="Part 1 存储单元与分析">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见存储单元
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见存储单元">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#latches" class="md-nav__link">
+    <span class="md-ellipsis">
+      锁存器(Latches)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-flops" class="md-nav__link">
+    <span class="md-ellipsis">
+      触发器(Flip-Flops)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      标准
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      例子
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#k-maps" class="md-nav__link">
-    <span class="md-ellipsis">
-      优化方法（K-Maps）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="优化方法（K-Maps）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      特点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      步骤
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      例子
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="例子">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#k-maps_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      三维K-maps
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#k-maps_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      四维K-Maps
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      常见错误
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dont-cares" class="md-nav__link">
-    <span class="md-ellipsis">
-      无关项（Don't cares)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      算法
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      总结
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      其他门介绍
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="其他门介绍">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    <span class="md-ellipsis">
-      与非门
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    <span class="md-ellipsis">
-      或非门
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      异或门与同或门
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="异或门与同或门">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    <span class="md-ellipsis">
-      特点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    <span class="md-ellipsis">
-      扩展
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#buffer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Buffer （缓冲门）
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Buffer （缓冲门）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    <span class="md-ellipsis">
-      特点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    <span class="md-ellipsis">
-      作用
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
-    <span class="md-ellipsis">
-      三态缓冲器
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    <span class="md-ellipsis">
-      其他复杂门
+      时序电路分析
     </span>
   </a>
   
@@ -959,112 +567,71 @@
   
 
 
-<h1 id="_1"><strong>电路的优化</strong><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2"><strong>评判一个电路的复杂性</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3"><strong>标准</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h1 id="_1">数字电路设计（时序电路）<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>时序电路由存储单元与组合电路组成，其中组合电路的输入除了外部信号，还有来自存储单元的信号，同理输出除了向外部输出信号，还有向储存单元输入信号。</p>
+<h2 id="part-1">Part 1 存储单元与分析<a class="headerlink" href="#part-1" title="Permanent link">&para;</a></h2>
+<p>按照存储单元更新时间分类</p>
 <ul>
-<li>Literal cost</li>
-<li>Gate input cost</li>
-<li>Gate input cost with NOTs</li>
+<li>同步时序电路：提供一个时钟信号，根据固定时间点更新。（更可控）</li>
+<li>异步时序电路：根据输出更新</li>
 </ul>
-<p><strong>Literal Cost</strong></p>
-<p>出现变量的个数（重复的也计算在内）</p>
-<p>缺点：只评价了第一层的电路数量</p>
-<p><strong>Gate Input Cost（门输入代价）</strong></p>
-<p>输入给逻辑门的总和</p>
-<p><strong>Gate input cost with NOTs</strong></p>
-<p>加上了非门（重复的算一个）</p>
-<h3 id="_4"><strong>例子</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204148.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204148.jpg" /></a></p>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204937.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705204937.jpg" /></a></p>
-<p>（G=10）</p>
-<h2 id="k-maps"><strong>优化方法（K-Maps）</strong><a class="headerlink" href="#k-maps" title="Permanent link">&para;</a></h2>
-<p>直观的方法：对规范形式使用minimization theorem(最小化定理)</p>
-<p>更进一步引入工具：K-Map</p>
-<h3 id="_5"><strong>特点</strong><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>表格每个方块代表最小项与最大项</p>
-</li>
-<li>
-<p>将真值表转换成二维表</p>
-</li>
-<li>
-<p>相邻的格子中仅有一个变量是不同的（按照格雷码排布）</p>
-</li>
-</ul>
-<h3 id="_6"><strong>步骤</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705211333.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705211333.jpg" /></a></p>
-<p>两个变量的格雷码编排：00 01 11 10（注意头尾也是<strong>相邻</strong>的）</p>
-<p>在K-Map中存在交叉的时候，复制一下就行</p>
-<h3 id="_7"><strong>例子</strong><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<h4 id="k-maps_1">三维K-maps<a class="headerlink" href="#k-maps_1" title="Permanent link">&para;</a></h4>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212913.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212913.jpg" /></a></p>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212917.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705212917.jpg" /></a></p>
-<p>（注意一下例子中xyz的标注方式）</p>
-<p>技巧：观察不变量（上面这个例子就是Y）</p>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705213944.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705213944.jpg" /></a></p>
-<h4 id="k-maps_2">四维K-Maps<a class="headerlink" href="#k-maps_2" title="Permanent link">&para;</a></h4>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705214545.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240705214545.jpg" /></a></p>
-<p>注意数字的排布</p>
-<h3 id="_8"><strong>常见错误</strong><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<ul>
-<li>只能圈1</li>
-<li>贪心地圈</li>
-<li>圈只能圈<span class="arithmatex">\(2^n\)</span>个，不能圈3，5个（去掉1个变量圈两个，去掉2个变量圈4个，去掉n个圈<span class="arithmatex">\(2^n\)</span>个）</li>
-</ul>
-<h3 id="dont-cares"><strong>无关项（Don't cares)</strong><a class="headerlink" href="#dont-cares" title="Permanent link">&para;</a></h3>
-<p>有些输入不可能出现，比如BCD码中只有0~9被使用，其他的就是无关项，这些项可0可1，所以就可以获得更多的优化机会。</p>
-<p><strong>例1</strong></p>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706141723.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706141723.jpg" /></a></p>
-<p>X取合适的0和1进行优化</p>
-<p><strong>例2</strong>（独热码（one-hot)与一般二进制编码的比较）</p>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706142232.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706142232.jpg" /></a></p>
-<p>独热码读取最小项时可以直接读特征项，比如说F1直接读Z，F2直接读Y+X，但这样就少了最小项之间可能存在的优化机会。</p>
-<p>编码稀疏，优化机会可能更多，减少门输入代价</p>
-<h3 id="_9"><strong>算法</strong><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>蕴含项（implicant)：就是SOP中的每项积以及POS中的每项和
-可分为：Prime Implicant and Essential Prime Implicant</p>
-<ul>
-<li>Prime Implicant（主蕴含项）：包含尽可能多的相邻项，且是$ 2^n $个</li>
-<li>Essential Prime Implicant（基本主蕴含项）：包含特殊蕴含项，可能没有（比如说循环的K-maps）【必选】</li>
-</ul>
-<p><strong>Quien McCluskey 算法</strong>
-1. 找到所有主蕴含项
-2. 包含进所有基本主蕴含项
-3. 挑选尽可能少的非基本主蕴含项去包含所有最小项</p>
-<p><strong>多层电路优化</strong>（提取公因式，不一定会减少）</p>
-<h3 id="_10"><strong>总结</strong><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706194845.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706194845.jpg" /></a></p>
-<h2 id="_11"><strong>其他门介绍</strong><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<h3 id="_12"><strong>与非门</strong><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<p>特点：直接用摩丝管做出来，是Universal Gate。但是代数特性不行（不满足结合律）</p>
-<h3 id="_13"><strong>或非门</strong><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
-<p>同上</p>
-<h3 id="_14"><strong>异或门与同或门</strong><a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
-<h4 id="_15">特点<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
-<p>非万能门，但是有较好代数特性</p>
-<p><span class="arithmatex">\(X \bigoplus Y = X \overline Y + \overline XY\)</span></p>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706201347.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706201347.jpg" /></a></p>
-<p>有趣的题目：怎么找出数组中唯一的一个出现一次的数，其他的数均出现两次（直接将所有元素做异或运算）<span class="arithmatex">\(X \bigoplus 0 =X\)</span>       <span class="arithmatex">\(X \bigoplus X =0\)</span></p>
-<h4 id="_16">扩展<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
-<p>若变量数大于2个，名字被替换为<strong>奇函数</strong>与<strong>偶函数</strong>（对输入的1的奇偶进行判断）【西洋棋盘形式】</p>
-<p>应用价值：产生校验位</p>
-<h3 id="buffer"><strong>Buffer （缓冲门）</strong><a class="headerlink" href="#buffer" title="Permanent link">&para;</a></h3>
-<h4 id="_17"><strong>特点</strong><a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
-<p>进来什么就出去什么</p>
-<h4 id="_18"><strong>作用</strong><a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>震荡问题：例如<span class="arithmatex">\(Y_n=\overline S\overline{Y_{n-1}}+SB\)</span> 当S=0时，Y的值会在0/1之间震荡，这种是设计时序电路中常见的问题。</p>
+<h3 id="_2"><strong>常见存储单元</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h4 id="latches"><strong>锁存器(Latches)</strong><a class="headerlink" href="#latches" title="Permanent link">&para;</a></h4>
 <ol>
-<li>增加信号强度与速度</li>
-<li>多个电路的信号输入一个门，需要一个buffer（0/1竞争问题造成短路）</li>
+<li><strong><span class="arithmatex">\(\overline S\)</span>-<span class="arithmatex">\(\overline R\)</span>  Latches</strong>（为0时有效，置位信号为0）</li>
 </ol>
-<h4 id="_19"><strong>三态缓冲器</strong><a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
-<p>多了一个控制信号</p>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203158.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203158.jpg" /></a></p>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203501.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203501.jpg" /></a></p>
-<p><strong>不能出现两个三态门同时打开</strong></p>
-<h3 id="_20"><strong>其他复杂门</strong><a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203948.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%202/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240706203948.jpg" /></a></p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714124313.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714124313.jpg" /></a></p>
+<p><em>震荡</em>：均为0的情形是不被允许的，这种情况下<span class="arithmatex">\(Q\)</span>与<span class="arithmatex">\(\overline Q\)</span>均为1，当他们同时变为1时，会产生震荡（理论上会一直震荡，同时为1/0，实际上由于器件的延时时间不同，造成会有某一个先达到1，这样就停止了震荡）。</p>
+<p><em>亚稳态(metastable)</em>：当S与R均0时，两个与非门等价为两个非门。除了两个有效存储信号的状态，还有一个状态是稳态的。这个稳态会受到扰动影响。</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714144322.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714144322.jpg" /></a></p>
+<p>这两种情形都是有害的，要尽可能去避免。第一种情况通过操作可以避免，第二种情况就是在输入时给足够的时间让电路完成信号的变化达到稳定状态。</p>
+<ol start="2">
+<li><strong><span class="arithmatex">\(S\)</span>-<span class="arithmatex">\(R\)</span> Latches</strong>（为1时有效，置位信号为1）</li>
+</ol>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714145056.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714145056.jpg" /></a></p>
+<p>均为1的情况时不被允许的，其他同上</p>
+<ol start="3">
+<li><strong>Clocked S-R Latch（同步电路）</strong></li>
+</ol>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714151415.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240714151415.jpg" /></a></p>
+<p>只有当C为高电位时，S和R才能被输入。同理S和R不能同时置位1。故引入下列电路</p>
+<ol start="4">
+<li><strong>D Latch</strong>（最广泛）</li>
+</ol>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715134037.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715134037.jpg" /></a></p>
+<p>这样就规避了中间态的情况，D的输入就反应在最后Q的输出上。</p>
+<h4 id="flip-flops">触发器(Flip-Flops)<a class="headerlink" href="#flip-flops" title="Permanent link">&para;</a></h4>
+<p>锁存器的定时问题（以二进制计数器为例）</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715141708.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715141708.jpg" /></a></p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715141712.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715141712.jpg" /></a></p>
+<p>在一次时钟信号内，可能会产生多次"空翻"。希望每一次时钟信号，变化仅仅只有一次。</p>
+<p>解决方案是切断电路输出与输入的联系。</p>
+<p><strong>主从触发器</strong>(Master-slave flip-flops)</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715143356.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715143356.jpg" /></a></p>
+<p>S和R先输入到Master中，产生稳定的信号，然后反转时，通过Slave来输出。</p>
+<p>但是，在采样阶段的毛刺信号会影响信号的输出(1s catching)，可通过将双通道改单通道或者减少采样时间来解决。</p>
+<p>改进为：<strong>D master-slave flip-flop</strong>（仅输入D，与D latches的改进类似）</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715200501.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715200501.jpg" /></a></p>
+<p>由于这个仅在边缘处采样（在C变为低电频时），被称为Negative-Edge-Triggered D Flip-Flop。若在C加上一个非门，则构成了Positive-Edge-Triggered D Flip-Flop。</p>
+<p><strong>Flip-Flop Timing Parameters</strong></p>
+<ul>
+<li>
+<p>Setup time (<span class="arithmatex">\(t_s\)</span>)（信号建立时间）：为了防止亚稳态的产生</p>
+</li>
+<li>
+<p>Hold time (<span class="arithmatex">\(t_{h}\)</span>)</p>
+</li>
+</ul>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715222538.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715222538.jpg" /></a></p>
+<ul>
+<li>propagation delay (<span class="arithmatex">\(t_{pd}\)</span>)</li>
+</ul>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715224718.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715224718.jpg" /></a></p>
+<p>(a)情况下，Setup time需要覆盖整个采样阶段</p>
+<p>(b)情况下，Setup time只需要在边沿的前一部分即可</p>
+<p>由于电路的特性，<span class="arithmatex">\(t_{pd}\)</span>比<span class="arithmatex">\(t_h\)</span>要大。</p>
+<h3 id="_3">时序电路分析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 
 
 

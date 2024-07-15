@@ -14,6 +14,8 @@
         <link rel="prev" href="../%E7%94%B5%E8%B7%AF%E7%9A%84%E4%BC%98%E5%8C%96/">
       
       
+        <link rel="next" href="../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1%EF%BC%88%E6%97%B6%E5%BA%8F%E7%94%B5%E8%B7%AF%EF%BC%89/">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
@@ -658,6 +660,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#aluarithmetic-logic-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALU(Arithmetic Logic Unit)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -667,6 +687,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1%EF%BC%88%E6%97%B6%E5%BA%8F%E7%94%B5%E8%B7%AF%EF%BC%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 数字电路设计（时序电路）
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -991,6 +1032,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#aluarithmetic-logic-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      ALU(Arithmetic Logic Unit)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1239,7 +1298,7 @@
 <li>
 <p>首位表示符号，剩余位是数值
     正号为0，负号为1，加号为0，减号为1。</p>
-<p>有符号数的加减法：
+<p>有符号数的加减法： 
 对三个符号做奇函数，如果是0，则对值进行相加，并检查是否溢出，然后符号即为加数的符号；如果是1，先按无符号数硬减，然后检查是否够减，若够减，则取被减数符号即可；若不够减，只需取补码后，符号取被减数符号的相反即可。</p>
 </li>
 <li>
@@ -1255,6 +1314,16 @@
 <p>如何判断<strong>溢出</strong>？不能通过进位来判断，判断加数与和的符号位的变化</p>
 <p>在这种表示法中，<span class="arithmatex">\(A+B\)</span>与<span class="arithmatex">\(A-B\)</span>可统一为一个电路，之后还要加一个溢出检测</p>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240711232448.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240711232448.jpg" /></a></p>
+<h3 id="aluarithmetic-logic-unit">ALU(Arithmetic Logic Unit)<a class="headerlink" href="#aluarithmetic-logic-unit" title="Permanent link">&para;</a></h3>
+<p>组成部分：输入，模式（逻辑or运算）选择，运算符选择，进位</p>
+<p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240712195549.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240712195549.jpg" /></a></p>
+<p>核心：加法器。通过对输入的改变来进行不同的运算</p>
+<h3 id="_17">其他<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ol>
+<li>递增器/递减器：将加法器中的B改为1即可，同时可以大量简化电路</li>
+<li>乘以除以<span class="arithmatex">\(2^n\)</span></li>
+<li>Zero Fill</li>
+</ol>
 
 
 
