@@ -713,6 +713,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AF%84%E5%AD%98%E5%99%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 寄存器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1093,9 +1114,13 @@
 <h4 id="fan-in-and-fan-out"><strong>Fan-in and Fan-out</strong><a class="headerlink" href="#fan-in-and-fan-out" title="Permanent link">&para;</a></h4>
 <p>输入与输出的引脚数量有限制。</p>
 <p><strong>标准负载</strong>定义为一个逆变器的输入。</p>
-<p><strong>Fan-in</strong></p>
+<ol>
+<li>Fan-in</li>
+</ol>
 <p>例子：与门做输入的时候，每多一个三极管就会多一层压降，降的一定数量就会降到0/1未定义区。 </p>
-<p><strong>Fan-out</strong></p>
+<ol start="2">
+<li>Fan-out</li>
+</ol>
 <p>Transition time：栅极输出从H变为L(<span class="arithmatex">\(t_{HL}\)</span>)或从L变为H(<span class="arithmatex">\(t_{LH}\)</span>)所需的时间。只聚焦于输出端。</p>
 <p><span class="arithmatex">\(t_{HL}\)</span>为从10%到90%的时间，<span class="arithmatex">\(t_{LH}\)</span>同理。</p>
 <p>最大fan-out指的是栅极再不超过其规定的最大过渡时间的情况下可以驱动的的标准负载的数量</p>
@@ -1104,30 +1129,46 @@
 <p><span class="arithmatex">\(t_{PHL}\)</span> 就是从输入端到达L与H值的中间点到输出端到达L与H值的中间点所经过的时间，<span class="arithmatex">\(t_{PLH}\)</span>同理。</p>
 <p><span class="arithmatex">\(t_{pd}\)</span>就是两者的最大值或者平均值</p>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707133243.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707133243.jpg" /></a></p>
-<p>注意其与Transition time的区别：</p>
+<div class="admonition danger">
+<p class="admonition-title">注意其与Transition time的区别：</p>
 <ul>
-<li>前者是从input到output的时间差</li>
-<li>后者是输出端从低变高所经过的时间</li>
+<li>
+<p>前者是从input到output的时间差</p>
+</li>
+<li>
+<p>后者是输出端从低变高所经过的时间</p>
+</li>
 </ul>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707133636.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707133636.jpg" /></a></p>
-<p><strong>延迟模型</strong></p>
-<p><strong>Transport delay（传播延迟）</strong></p>
+</div>
+<ol>
+<li><strong>延迟模型</strong></li>
+</ol>
+<p>(1)Transport delay（传播延迟）</p>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707134935.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707134935.jpg" /></a></p>
-<p><strong>Inertial delay （惯性延迟）</strong></p>
+<p>(2)Inertial delay （惯性延迟）</p>
 <p>过滤掉小脉冲</p>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707135302.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707135302.jpg" /></a></p>
-<p><strong>fan-out亦会影响传播时间</strong>（负载越多，延迟时间也会越长）【最真实】</p>
+<div class="admonition tip">
+<p class="admonition-title"><strong>fan-out亦会影响传播时间</strong>（负载越多，延迟时间也会越长）【最真实】</p>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707140431.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707140431.jpg" /></a></p>
-<p><strong>延迟对电路的影响</strong></p>
+</div>
+<ol start="2">
+<li><strong>延迟对电路的影响</strong></li>
+</ol>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707141009.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707141009.jpg" /></a></p>
-<p>会产生毛刺信号</p>
+<p>会产生<em>毛刺信号</em></p>
 <p>解决方案：加滤波器，或者加产生毛刺的冗余项。</p>
-<p>例如：在下面这个例子中，毛刺是在AB均是1，S由1到0的时候产生，那么我们在原先的式子中加上AB即可消除毛刺。</p>
+<div class="admonition example">
+<p class="admonition-title">去除毛刺的例子</p>
+<p>毛刺是在AB均是1，S由1到0的时候产生，那么我们在原先的式子中加上AB即可消除毛刺。</p>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707142739.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707142739.jpg" /></a></p>
-<h3 id="_6">工艺映射<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+</div>
+<h3 id="_6"><strong>工艺映射</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>已知布尔函数找到合适的门电路完成工艺</p>
 <p><strong>元器件库</strong>，包括了图例、面积、负载、延迟时间等等</p>
-<p>例子：将电路映射到与非门上</p>
+<div class="admonition example">
+<p class="admonition-title">例：将电路映射到与非门上</p>
 <ol>
 <li>
 <p>将与门与或门用与非门替换</p>
@@ -1137,8 +1178,9 @@
 </li>
 </ol>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709155219.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709155219.jpg" /></a></p>
+</div>
 <h2 id="part-2"><strong>Part 2 函数模块</strong><a class="headerlink" href="#part-2" title="Permanent link">&para;</a></h2>
-<h3 id="_7">基本逻辑函数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h3 id="_7"><strong>基本逻辑函数</strong><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>定值函数：<span class="arithmatex">\(F=0\)</span> or <span class="arithmatex">\(F=1\)</span></p>
 <p>传输函数：<span class="arithmatex">\(F=X\)</span></p>
 <p>逆变函数：<span class="arithmatex">\(F=\overline X\)</span></p>
@@ -1153,7 +1195,7 @@
 </ul>
 <p>就是让EN为1使输出信号与输入信号相同，为0时，让输出恒为0（与）或1（或）</p>
 <p>与三态门作区别：三态门的使能引脚是放在中间的，是控制的而不是信号源。同时三态门还有一个高阻状态（切断），而使能函数则是恒输出0/1</p>
-<h3 id="_8">译码器<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_8"><strong>译码器</strong><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <p>译码器：输入n个，输出m个（<span class="arithmatex">\(n\leq m \leq 2^n\)</span>)</p>
 <p><strong>自顶向下设计译码器</strong></p>
 <p>1-2译码器</p>
@@ -1167,7 +1209,7 @@
 <p><strong>自底向上设计3-8译码器</strong></p>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707193858.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240707193858.jpg" /></a></p>
 <p>译码器应用：加法器、显示器……</p>
-<h3 id="_9">编码器<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_9"><strong>编码器</strong><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>编码器：译码器的反过程，输入m个，输出n个（<span class="arithmatex">\(n\leq m \leq 2^n\)</span>)</p>
 <p>一些常用的编码器：</p>
 <ol>
@@ -1183,24 +1225,24 @@
 </ol>
 <p>怎么读次优解？</p>
 <p>读确定量，如Y1就读<span class="arithmatex">\(D3+\overline {D3}D2\)</span>，V读<span class="arithmatex">\(D3+D2+D1+D0\)</span></p>
-<h3 id="mux">多路选择器（MUX）<a class="headerlink" href="#mux" title="Permanent link">&para;</a></h3>
+<h3 id="mux"><strong>多路选择器（MUX）</strong><a class="headerlink" href="#mux" title="Permanent link">&para;</a></h3>
 <p><strong>两种构成方法</strong>：译码器+AND-OR gates 和 三态缓冲器</p>
 <p><strong>基本构成</strong>：<span class="arithmatex">\(2^n\)</span>个输入，n个选择，1个输出</p>
 <p>第一种：译码器提供有效信号，然后提供给与门的使能端，然后再通过或门</p>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709175154.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709175154.jpg" /></a></p>
-<p>输入源规模扩展：注意最后or门会超出fan-in的限额</p>
-<p>输入源本身的扩展，输入向量：对每一位分别作与或电路，译码信号共享</p>
+<p>​   输入源规模扩展：注意最后or门会超出fan-in的限额</p>
+<p>​   输入源本身的扩展，输入向量：对每一位分别作与或电路，译码信号共享</p>
 <p>第二种：</p>
 <ul>
 <li>与或电路用三态门替代，使能端链接译码信号，并且可以直接连到一个路上，不需要或门（少了门输入代价）</li>
 </ul>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709193953.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709193953.jpg" /></a></p>
-<p>GN=18</p>
+<p>​ GN=18</p>
 <ul>
-<li>作多次选择</li>
+<li>作<strong>多次</strong>选择</li>
 </ul>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709193957.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709193957.jpg" /></a></p>
-<p>​       GN=16</p>
+<p>​           GN=16</p>
 <p><strong>作用</strong>：更灵活译码器的构造</p>
 <ol>
 <li>
@@ -1211,11 +1253,14 @@
 </li>
 </ol>
 <p>改变真值表就可以改变函数，所以更加灵活</p>
-<p>例子：格雷码到二进制码的转换
-   <a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709223755.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709223755.jpg" /></a></p>
-<p>优化：（带参数的K-Maps)<a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709224241.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709224241.jpg" /></a></p>
+<details class="example">
+<summary>格雷码到二进制码的转换</summary>
+<p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709223755.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709223755.jpg" /></a></p>
+<p>优化：（带参数的K-Maps)</p>
+<p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709224241.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709224241.jpg" /></a></p>
 <p>降维的方法：将三维K-Maps化为二维，以C为参数，填入最终二维表格的值为四种情况<span class="arithmatex">\(C\)</span>、<span class="arithmatex">\(\overline C\)</span>、1、0。仅需考虑合并后的AB项后的状态即可。</p>
-<h3 id="_10">四种常用器件总结<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+</details>
+<h3 id="_10"><strong>四种常用器件总结</strong><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709231302.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240709231302.jpg" /></a></p>
 <h2 id="part-3"><strong>Part 3 可编程函数</strong><a class="headerlink" href="#part-3" title="Permanent link">&para;</a></h2>
 <p>可编程逻辑器件</p>
@@ -1314,11 +1359,11 @@
 <p>如何判断<strong>溢出</strong>？不能通过进位来判断，判断加数与和的符号位的变化</p>
 <p>在这种表示法中，<span class="arithmatex">\(A+B\)</span>与<span class="arithmatex">\(A-B\)</span>可统一为一个电路，之后还要加一个溢出检测</p>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240711232448.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240711232448.jpg" /></a></p>
-<h3 id="aluarithmetic-logic-unit">ALU(Arithmetic Logic Unit)<a class="headerlink" href="#aluarithmetic-logic-unit" title="Permanent link">&para;</a></h3>
+<h3 id="aluarithmetic-logic-unit"><strong>ALU(Arithmetic Logic Unit)</strong><a class="headerlink" href="#aluarithmetic-logic-unit" title="Permanent link">&para;</a></h3>
 <p>组成部分：输入，模式（逻辑or运算）选择，运算符选择，进位</p>
 <p><a class="glightbox" href="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240712195549.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%203/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240712195549.jpg" /></a></p>
 <p>核心：加法器。通过对输入的改变来进行不同的运算</p>
-<h3 id="_17">其他<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h3 id="_17"><strong>其他</strong><a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <ol>
 <li>递增器/递减器：将加法器中的B改为1即可，同时可以大量简化电路</li>
 <li>乘以除以<span class="arithmatex">\(2^n\)</span></li>

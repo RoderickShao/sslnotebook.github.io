@@ -14,6 +14,8 @@
         <link rel="prev" href="../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%BB%84%E5%90%88%E7%94%B5%E8%B7%AF%EF%BC%89/">
       
       
+        <link rel="next" href="../%E5%AF%84%E5%AD%98%E5%99%A8/">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
@@ -443,6 +445,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="时序电路分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态分析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -450,10 +476,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#part-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2 时序电路设计
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AF%84%E5%AD%98%E5%99%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 寄存器
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -542,10 +598,43 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="时序电路分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态分析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间分析
+    </span>
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2 时序电路设计
+    </span>
+  </a>
   
 </li>
       
@@ -567,9 +656,9 @@
   
 
 
-<h1 id="_1">数字电路设计（时序电路）<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1"><strong>数字电路设计（时序电路）</strong><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>时序电路由存储单元与组合电路组成，其中组合电路的输入除了外部信号，还有来自存储单元的信号，同理输出除了向外部输出信号，还有向储存单元输入信号。</p>
-<h2 id="part-1">Part 1 存储单元与分析<a class="headerlink" href="#part-1" title="Permanent link">&para;</a></h2>
+<h2 id="part-1"><strong>Part 1 存储单元与分析</strong><a class="headerlink" href="#part-1" title="Permanent link">&para;</a></h2>
 <p>按照存储单元更新时间分类</p>
 <ul>
 <li>同步时序电路：提供一个时钟信号，根据固定时间点更新。（更可控）</li>
@@ -607,13 +696,43 @@
 <p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715141712.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715141712.jpg" /></a></p>
 <p>在一次时钟信号内，可能会产生多次"空翻"。希望每一次时钟信号，变化仅仅只有一次。</p>
 <p>解决方案是切断电路输出与输入的联系。</p>
-<p><strong>主从触发器</strong>(Master-slave flip-flops)</p>
+<ol>
+<li><strong>主从触发器</strong>(Master-slave flip-flops)</li>
+</ol>
 <p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715143356.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715143356.jpg" /></a></p>
 <p>S和R先输入到Master中，产生稳定的信号，然后反转时，通过Slave来输出。</p>
 <p>但是，在采样阶段的毛刺信号会影响信号的输出(1s catching)，可通过将双通道改单通道或者减少采样时间来解决。</p>
-<p>改进为：<strong>D master-slave flip-flop</strong>（仅输入D，与D latches的改进类似）</p>
+<ol start="2">
+<li><strong>D master-slave flip-flop</strong>（仅输入D，与D latches的改进类似）</li>
+</ol>
 <p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715200501.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715200501.jpg" /></a></p>
 <p>由于这个仅在边缘处采样（在C变为低电频时），被称为Negative-Edge-Triggered D Flip-Flop。若在C加上一个非门，则构成了Positive-Edge-Triggered D Flip-Flop。</p>
+<ol start="3">
+<li><strong>J-K flip-flop</strong></li>
+</ol>
+<p>允许J=K=1的S-R flip-flop，当J-K均为1时，信号反向。</p>
+<ol start="4">
+<li><strong>T flip-flop</strong></li>
+</ol>
+<p>只有一个输入T，其中T=0时，状态不改变，T=1时，状态反向。</p>
+<p><strong>Basic Flip-Flop Descriptors</strong></p>
+<p>​   分析中使用特征表与特征方程，设计时使用激励表与激励方程</p>
+<details class="note">
+<summary>D Flip-FLop Descriptors</summary>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724165516.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724165516.jpg" /></a></p>
+</details>
+<details class="note">
+<summary>T Flip-FLop Descriptors</summary>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724165520.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724165520.jpg" /></a></p>
+</details>
+<details class="note">
+<summary>T Flip-FLop Descriptors</summary>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724165526.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724165526.jpg" /></a></p>
+</details>
+<details class="note">
+<summary>J-K Flip-FLop Descriptors</summary>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724165532.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724165532.jpg" /></a></p>
+</details>
 <p><strong>Flip-Flop Timing Parameters</strong></p>
 <ul>
 <li>
@@ -631,7 +750,121 @@
 <p>(a)情况下，Setup time需要覆盖整个采样阶段</p>
 <p>(b)情况下，Setup time只需要在边沿的前一部分即可</p>
 <p>由于电路的特性，<span class="arithmatex">\(t_{pd}\)</span>比<span class="arithmatex">\(t_h\)</span>要大。</p>
-<h3 id="_3">时序电路分析<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">相关图例</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715214627.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240715214627.jpg" /></a></p>
+</div>
+<h3 id="_3"><strong>时序电路分析</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h4 id="_4">状态分析<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716114830.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716114830.jpg" /></a></p>
+<p><strong>三个方程</strong>：输入方程、输出方程、下一状态方程</p>
+<p><strong>状态表</strong>包括输入、前一状态的输入，输出、下一状态的输出</p>
+<p><strong>状态图</strong>(State Diagrams)：</p>
+<ul>
+<li>
+<p>Mealy Models</p>
+<p>输出由输入以及原本状态决定，输出标注在弧上</p>
+</li>
+<li>
+<p>Moore Models</p>
+<p>输出仅仅只由状态决定，输出标在状态上。</p>
+</li>
+</ul>
+<details class="example">
+<summary>状态图与状态表的例子</summary>
+<p>三个方程：</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716115833.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716115833.jpg" /></a></p>
+<p>状态表的绘制方法1：</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716122229.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716122229.jpg" /></a></p>
+<p>状态表的绘制方法2：</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716135132.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716135132.jpg" /></a>
+状态图：</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716145445.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716145445.jpg" /></a></p>
+</details>
+<p>等价状态：对于任何输入，两个状态输出相同，称这两个状态等价。</p>
+<details class="example">
+<summary>等价状态的例子</summary>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716150922.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716150922.jpg" /></a>
+<a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716150927.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716150927.jpg" /></a></p>
+</details>
+<h4 id="_5">时间分析<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex">\(t_p\)</span> clock period</li>
+<li><span class="arithmatex">\(t_{pd,FF}\)</span> flip-flop propagation delay</li>
+<li><span class="arithmatex">\(t_{pd,COMB}\)</span>  combinational logic delay</li>
+<li><span class="arithmatex">\(t_s\)</span> flip-flop setup time</li>
+<li><span class="arithmatex">\(t_{slack}\)</span> extra time in the clock period</li>
+</ul>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716163259.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716163259.jpg" /></a></p>
+<p>关系：<span class="arithmatex">\(t_p\geq t_{slack}+(t_{pd,FF}+t_{pd,COMB}+t_s)\)</span></p>
+<details class="example">
+<summary>例子</summary>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716171409.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240716171409.jpg" /></a></p>
+<p><span class="arithmatex">\(t_{pd,NOT}=0.5ns\)</span> <span class="arithmatex">\(t_{pd,FF}=2.0ns\)</span></p>
+<p><span class="arithmatex">\(t_{pd,XOR}=2.0ns\)</span> <span class="arithmatex">\(t_s=1.0ns\)</span></p>
+<p><span class="arithmatex">\(t_{pd_AND}=1.0ns\)</span> <span class="arithmatex">\(t_h=0.25ns\)</span></p>
+<ol>
+<li>Find the longest path delay from external input passing through gates only to output</li>
+</ol>
+<p><span class="arithmatex">\(t_{pd,XOR}+t_{pd,XOR}=2.0ns+2.0ns=4.0ns\)</span></p>
+<ol start="2">
+<li>Find the longest path delay in the circuit from external input to positive clock edge</li>
+</ol>
+<p><span class="arithmatex">\(t_{pd,XOR}+t_{pd,NOT}+t_s=2.0ns+0.5ns+1.0ns=3.5ns\)</span></p>
+<ol start="3">
+<li>Find the longest path from positive clock edge to output</li>
+</ol>
+<p><span class="arithmatex">\(t_{pd,FF}+t_{pd_AND}+t_{pd,XOR}+t_{pd,XOR}=2.0ns+1.0ns+2.0ns+2.0ns=7.0ns\)</span></p>
+<ol start="4">
+<li>Find the longest path from positive clock edge to the positive clock edge </li>
+</ol>
+<p><span class="arithmatex">\(t_{pd,FF}+t_{pd_AND}+t_{pd,XOR}+t_{pd,NOT}+t_s=2.0ns+1.0ns+2.0ns+0.5ns+1.0ns=6.5ns\)</span></p>
+<ol start="5">
+<li>Determine the maximum frequency of the circuit in MHz</li>
+</ol>
+<p><span class="arithmatex">\(f_{max}=1/6.5\times 10^{-9}\approx 154MHz\)</span></p>
+</details>
+<h2 id="part-2">Part 2 时序电路设计<a class="headerlink" href="#part-2" title="Permanent link">&para;</a></h2>
+<p>与时序电路分析相反，先得到状态图，然后得到状态表，最后得到三个方程（输入方程、输出方程、激励方程）。</p>
+<p>下列以Recognize 1011为例，设计相关时序电路</p>
+<ol>
+<li>设计状态：</li>
+</ol>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724145624.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724145624.jpg" /></a></p>
+<ol start="2">
+<li>画出状态图，并完成状态表</li>
+</ol>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724151734.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724151734.jpg" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Mealy Model to Moore Model</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724152033.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724152033.jpg" /></a></p>
+<p>通过增加一个状态实现两种模型的转换</p>
+</div>
+<ol start="3">
+<li>状态表的简化</li>
+</ol>
+<p>首先，等价状态要满足输出要完全一样。</p>
+<p>其次，针对下一状态，等价状态有三种情形：</p>
+<p>（1）下一状态相同</p>
+<p>（2）下一状态交错的</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724153101.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724153101.jpg" /></a></p>
+<p>（3）下一状态循环</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724153105.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724153105.jpg" /></a></p>
+<p>4.状态的赋值并求解输入方程输出方程（以D flip-flop为例）</p>
+<p>​   不同的赋值方法对应的门输入代价是不同的。</p>
+<p>（1)Counting Order Assignment</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724160953.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724160953.jpg" /></a></p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724160957.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724160957.jpg" /></a></p>
+<p>(2)Grey Code Assignment</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724161328.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724161328.jpg" /></a></p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724161331.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724161331.jpg" /></a></p>
+<p>(3)One-Hot Assignment</p>
+<p><a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724161334.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724161334.jpg" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">以J-K flip-flop作为输入</p>
+<p>根据相应的激励方程补充。
+<a class="glightbox" href="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724175624.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%204/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240724175624.jpg" /></a></p>
+</div>
 
 
 
