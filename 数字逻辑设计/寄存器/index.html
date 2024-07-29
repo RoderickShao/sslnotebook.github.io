@@ -14,6 +14,8 @@
         <link rel="prev" href="../%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1%EF%BC%88%E6%97%B6%E5%BA%8F%E7%94%B5%E8%B7%AF%EF%BC%89/">
       
       
+        <link rel="next" href="../%E5%86%85%E5%AD%98%E5%9F%BA%E7%A1%80/">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
@@ -484,6 +486,57 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器单元设计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      串行数据传输
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3 数字系统设计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3 数字系统设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashwatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      设计DashWatch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -493,6 +546,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%86%85%E5%AD%98%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 内存基础
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -596,6 +670,57 @@
   <a href="#counters" class="md-nav__link">
     <span class="md-ellipsis">
       计数器(Counters)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      寄存器单元设计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      串行数据传输
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3 数字系统设计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3 数字系统设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashwatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      设计DashWatch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
     </span>
   </a>
   
@@ -729,6 +854,44 @@
 <p>（3） 拓展：超过4位的N，需要计数器的拼接</p>
 <p>例如8-38的重复计数器：</p>
 <p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240726225904.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240726225904.jpg" /></a></p>
+<h3 id="_5">寄存器单元设计<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>两种设计方法：一是基于MUX的设计方法，二是传统时序电路的设计方法</p>
+<p>基于MUX的设计方法的基本模板：</p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727230106.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727230106.jpg" /></a></p>
+<p>下面利用一个例子来比较两种方法的优劣。</p>
+<p>Register transfers:  <span class="arithmatex">\(CY:A\leftarrow B\bigoplus A\)</span>    $CX:A\leftarrow B\vee A  $     <span class="arithmatex">\(Hold state:(0,0)\)</span></p>
+<p>Control inputs:<span class="arithmatex">\((CY,CX)\)</span></p>
+<p>方法一：</p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727230849.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727230849.jpg" /></a></p>
+<p>​   门输入代价为19</p>
+<p>方法2：</p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727231130.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="left" alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727231130.jpg" /></a></p>
+<p>先画出状态图(Moore Model)，然后画出状态表，然后利用K-Maps写出方程。这时的门数入代价就是14。</p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727231138.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727231138.jpg" /></a></p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727231142.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727231142.jpg" /></a></p>
+<p>比较上述两种方法，方法一简单但是门数入代价较高，方法二复杂但门数入代价较小。但在面对较多状态时，方法二无法有效解决问题。</p>
+<h3 id="_6">串行数据传输<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>串行数据传输与并行数据传输相对应。</p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729180250.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729180250.jpg" /></a></p>
+<p>串行数据传输不受数据大小长度影响，而并行数据传输受其影响</p>
+<h2 id="part-3">Part 3 数字系统设计<a class="headerlink" href="#part-3" title="Permanent link">&para;</a></h2>
+<p>数字系统设计三要素：寄存器、微操作、控制</p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727232214.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240727232214.jpg" /></a></p>
+<h3 id="dashwatch">设计DashWatch<a class="headerlink" href="#dashwatch" title="Permanent link">&para;</a></h3>
+<p>要求：</p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729164542.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729164542.jpg" /></a></p>
+<p>画控制单元的状态图：</p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729165347.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729165347.jpg" /></a></p>
+<p>针对Datapath的控制信号(Control Signals)：</p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729171510.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729171510.jpg" /></a></p>
+<p>数据通路(Datapath)：</p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729171514.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729171514.jpg" /></a></p>
+<p>控制单元(Control Unit):</p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729173501.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729173501.jpg" /></a></p>
+<p><a class="glightbox" href="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729173731.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../image/chapter%205/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240729173731.jpg" /></a></p>
+<p>控制单元的输出：</p>
+<p><span class="arithmatex">\(LSR=S1+S6,RSTM+S2,ENTM=S3,UPDATE=S6,DS=S7\)</span></p>
+<h3 id="_7"><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 
 
 
