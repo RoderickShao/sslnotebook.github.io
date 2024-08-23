@@ -11,10 +11,8 @@
       
       
       
-        <link rel="prev" href="../../Python%E5%AD%A6%E4%B9%A0/%E5%BC%82%E5%B8%B8%E6%83%85%E5%86%B5%E5%A4%84%E7%90%86/">
+        <link rel="prev" href="../%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
       
-      
-        <link rel="next" href="../requests%E6%A8%A1%E5%9D%97/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>1 数据解析方式 - RoderickShao's NoteBook</title>
+        <title>2 数据解析方式 - RoderickShao's NoteBook</title>
       
     
     
@@ -113,6 +111,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -145,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1 数据解析方式
+              2 数据解析方式
             
           </span>
         </div>
@@ -615,26 +618,18 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    1 数据解析方式
+    1 正则表达式
   </span>
   
 
       </a>
-      
     </li>
   
 
@@ -644,18 +639,145 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../requests%E6%A8%A1%E5%9D%97/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2 数据解析方式
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    2 requests模块
+    2 数据解析方式
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#re" class="md-nav__link">
+    <span class="md-ellipsis">
+      re模块
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="re模块">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomplie" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.complie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rematch" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.match
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re-findall" class="md-nav__link">
+    <span class="md-ellipsis">
+      re. findall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re-finditer" class="md-nav__link">
+    <span class="md-ellipsis">
+      re. finditer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      例子
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xpath模块
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bs4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bs4模块
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -685,6 +807,103 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#re" class="md-nav__link">
+    <span class="md-ellipsis">
+      re模块
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="re模块">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomplie" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.complie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rematch" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.match
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research" class="md-nav__link">
+    <span class="md-ellipsis">
+      re.search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re-findall" class="md-nav__link">
+    <span class="md-ellipsis">
+      re. findall
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re-finditer" class="md-nav__link">
+    <span class="md-ellipsis">
+      re. finditer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      例子
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xpath" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xpath模块
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bs4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bs4模块
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -702,9 +921,249 @@
   
 
 
-  <h1>1 数据解析方式</h1>
-
-
+<h1 id="_1"><strong>数据解析方式</strong><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="re"><strong>re模块</strong><a class="headerlink" href="#re" title="Permanent link">&para;</a></h2>
+<p>正则表达式（Regular Expression，简称 re）是一种强大而灵活的工具，广泛用于字符串匹配、替换和分割等操作，尤其在处理网页爬虫数据时非常有用。Python 提供了 " re " 模块来支持正则表达式的使用，本文将结合常见的用法和示例，带你快速入门。</p>
+<h3 id="recomplie"><strong>re.complie</strong><a class="headerlink" href="#recomplie" title="Permanent link">&para;</a></h3>
+<p>compile 函数用于编译正则表达式，生成一个正则表达式（ Pattern ）对象。</p>
+<p>可以预加载某一个正则表达式，以供多次使用。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 预加载正则表达式</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">ret</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="s2">&quot;我的电话号码是：10086,我同学的电话号码是：10010&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="rematch"><strong>re.match</strong><a class="headerlink" href="#rematch" title="Permanent link">&para;</a></h3>
+<p>re.match 尝试从字符串的<strong>起始位置</strong>匹配一个模式，如果不是起始位置匹配成功的话，match() 就返回 none。</p>
+<p><strong>语法</strong>：<code>match(pattern, string, flags=0)</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数</th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">pattern</td>
+<td style="text-align: left;">匹配的正则表达式</td>
+</tr>
+<tr>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">要匹配的字符串。</td>
+</tr>
+<tr>
+<td style="text-align: left;">flags</td>
+<td style="text-align: left;">标志位，用于控制正则表达式的匹配方式，如：是否区分大小写，多行匹配等等。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>可选标志</strong>：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">修饰符</th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">re.I</td>
+<td style="text-align: left;">使匹配对大小写不敏感</td>
+</tr>
+<tr>
+<td style="text-align: left;">re.L</td>
+<td style="text-align: left;">做本地化识别（locale-aware）匹配</td>
+</tr>
+<tr>
+<td style="text-align: left;">re.M</td>
+<td style="text-align: left;">多行匹配，影响 ^ 和 $</td>
+</tr>
+<tr>
+<td style="text-align: left;">re.S</td>
+<td style="text-align: left;">使 . 匹配包括换行在内的所有字符</td>
+</tr>
+<tr>
+<td style="text-align: left;">re.U</td>
+<td style="text-align: left;">根据Unicode字符集解析字符。这个标志影响 \w, \W, \b, \B.</td>
+</tr>
+<tr>
+<td style="text-align: left;">re.X</td>
+<td style="text-align: left;">该标志通过给予你更灵活的格式以便你将正则表达式写得更易于理解。</td>
+</tr>
+</tbody>
+</table>
+<p>我们可以使用 group(num) 或 groups() 匹配对象函数来获取匹配表达式。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">匹配对象方法</th>
+<th style="text-align: left;">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">group(num=0)</td>
+<td style="text-align: left;">匹配的整个表达式的字符串，group() 可以一次输入多个组号，在这种情况下它将返回一个包含那些组所对应值的元组。</td>
+</tr>
+<tr>
+<td style="text-align: left;">groups()</td>
+<td style="text-align: left;">返回一个包含所有小组字符串的元组，从 1 到 所含的小组号。</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">group 相关例子</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">re</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">line</span> <span class="o">=</span> <span class="s2">&quot;Cats are smarter than dogs&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">matchObj</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span> <span class="sa">r</span><span class="s1">&#39;(.*) are (.*?) .*&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">M</span><span class="o">|</span><span class="n">re</span><span class="o">.</span><span class="n">I</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">if</span> <span class="n">matchObj</span><span class="p">:</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>   <span class="nb">print</span> <span class="s2">&quot;matchObj.group() : &quot;</span><span class="p">,</span> <span class="n">matchObj</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>   <span class="nb">print</span> <span class="s2">&quot;matchObj.group(1) : &quot;</span><span class="p">,</span> <span class="n">matchObj</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>   <span class="nb">print</span> <span class="s2">&quot;matchObj.group(2) : &quot;</span><span class="p">,</span> <span class="n">matchObj</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>   <span class="nb">print</span> <span class="s2">&quot;No match!!&quot;</span>
+</code></pre></div>
+执行结果:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>matchObj.group() :  Cats are smarter than dogs
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>matchObj.group(1) :  Cats
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>matchObj.group(2) :  smarter
+</code></pre></div></p>
+</div>
+<p><strong>start([group])</strong> 方法用于获取分组匹配的子串在整个字符串中的起始位置（子串第一个字符的索引），参数默认值为 0；</p>
+<p><strong>end([group])</strong> 方法用于获取分组匹配的子串在整个字符串中的结束位置（子串最后一个字符的索引+1），参数默认值为 0；</p>
+<p><strong>span([group])</strong> 方法返回 (start(group), end(group))</p>
+<h3 id="research"><strong>re.search</strong><a class="headerlink" href="#research" title="Permanent link">&para;</a></h3>
+<p>re.search 扫描整个字符串并返回第一个成功的匹配。</p>
+<p><strong>语法</strong>：<code>match(pattern, string, flags=0)</code></p>
+<p>匹配成功re.search方法返回一个匹配的对象，否则返回None。</p>
+<div class="admonition note">
+<p class="admonition-title">re.search与re.match的区别</p>
+<p>re.match只匹配字符串的开始，如果字符串开始不符合正则表达式，则匹配失败，函数返回None；而re.search匹配整个字符串，直到找到一个匹配。</p>
+</div>
+<h3 id="re-findall"><strong>re. findall</strong><a class="headerlink" href="#re-findall" title="Permanent link">&para;</a></h3>
+<p>在字符串中找到正则表达式所匹配的所有子串，并返回一个<strong>列表</strong>，如果没有找到匹配的，则返回空列表。注意<strong>：</strong> match 和 search 是匹配一次， findall 匹配所有。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># findall: 匹配所有字符串中所有的符合正则的内容，并返回一个列表</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># \d+: 代表匹配一个或多个数字</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">lst</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span><span class="s2">&quot;我的电话号码是：10086&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="re-finditer"><strong>re. finditer</strong><a class="headerlink" href="#re-finditer" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># finditer: 匹配所有字符串中所有的符合正则的内容，并返回一个迭代器</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">it</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span><span class="s2">&quot;我的电话号码是：10086&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
+</code></pre></div>
+<h3 id="_2"><strong>例子</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>(?P&lt;分组名字&gt;正则) 可以单独从正则表达式中提取数据，给匹配数据标名字</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="s2">&lt;div class=&#39;jay&#39;&gt;&lt;span id=&#39;1&#39;&gt;郭麒麟&lt;/span&gt;&lt;/div&gt;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="s2">&lt;div class=&#39;jj&#39;&gt;&lt;span id=&#39;2&#39;&gt;大聪明&lt;/span&gt;&lt;/div&gt;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="s2">&lt;div class=&#39;jolin&#39;&gt;&lt;span id=&#39;3&#39;&gt;胡说八道&lt;/span&gt;&lt;/div&gt;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="s2">&lt;div class=&#39;sylar&#39;&gt;&lt;span id=&#39;4&#39;&gt;范思哲&lt;/span&gt;&lt;/div&gt;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># re.S:让点能匹配换行符</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># (?P&lt;分组名字&gt;正则) 可以单独从正则表达式中提取数据</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">obj</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&lt;div class=&#39;(.*?)&#39;&gt;&lt;span id=&#39;(?P&lt;id&gt;\d+)&#39;&gt;(.*?)&lt;/span&gt;&lt;/div&gt;&quot;</span><span class="p">,</span><span class="n">re</span><span class="o">.</span><span class="n">S</span><span class="p">)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">result</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">))</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="xpath"><strong>Xpath模块</strong><a class="headerlink" href="#xpath" title="Permanent link">&para;</a></h2>
+<p>etree.HTML()可以用来解析字符串格式的HTML文档对象，将传进去的字符串转变成_Element对象。作为_Element对象，可以方便的使用getparent()、remove()、xpath()等方法。</p>
+<p>这里我们通过xpath的方法解析源代码</p>
+<p>xpath的获取可以直接通过开发者工具得到</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span> <span class="nn">requests</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span> <span class="nn">csv</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://www.zbj.com/fw/?k=saas&quot;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">resp</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">resp</span><span class="o">.</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;猪八戒网.csv&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span><span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="n">html</span><span class="o">=</span><span class="n">etree</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="c1">#拿到每一个服务商的div</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="n">divs</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//*[@id=&#39;__layout&#39;]/div/div[3]/div[1]/div[4]/div/div[2]/div/div[2]/div&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="k">for</span> <span class="n">div</span> <span class="ow">in</span> <span class="n">divs</span><span class="p">:</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    <span class="n">price</span> <span class="o">=</span> <span class="n">div</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;./div/div[3]/div[1]/span/text()&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;¥&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;saas&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">div</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;./div/div[3]/div[2]/a/span/text()&quot;</span><span class="p">))</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="n">com_name</span> <span class="o">=</span> <span class="n">div</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;./div/div[5]/div/div/div/text()&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">price</span><span class="p">,</span><span class="n">title</span><span class="p">,</span><span class="n">com_name</span><span class="p">)</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>    <span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">price</span><span class="p">,</span><span class="n">title</span><span class="p">,</span><span class="n">com_name</span><span class="p">])</span>
+</code></pre></div>
+<h2 id="bs4"><strong>Bs4模块</strong><a class="headerlink" href="#bs4" title="Permanent link">&para;</a></h2>
+<p>参考<a href="https://beautifulsoup.readthedocs.io/zh-cn/v4.4.0/#id27">Beautiful Soup 4.4.0 文档 — Beautiful Soup 4.2.0 中文 文档</a></p>
+<ol>
+<li>创造一个BeautifulSoup对象</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">soup</span> <span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r1</span><span class="o">.</span><span class="n">text</span><span class="p">,</span><span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1">#print(soup)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># 将文档传入beautifulSoup的方法</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">文档路径</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">编码格式</span><span class="p">),</span><span class="n">features</span><span class="o">=</span><span class="n">解析器</span><span class="p">)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1">#或传入字符串或文件句柄</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="c1"># 传入字符串</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;recall&#39;</span><span class="p">,</span> <span class="n">features</span><span class="o">=</span><span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1"># 输出&lt;html&gt;&lt;body&gt;&lt;p&gt;recall&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="c1"># 传入文件句柄</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;html&gt;recall&lt;/html&gt;&#39;</span><span class="p">)</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="c1"># 输出&lt;html&gt;&lt;body&gt;&lt;p&gt;recall&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</span>
+</code></pre></div>
+<p>两个参数：第一个参数是要解析的html文本，第二个参数是使用那种解析器，对于HTML来讲就是html.parser，这个是bs4自带的解析器。</p>
+<table>
+<thead>
+<tr>
+<th>解析器</th>
+<th>使用方法</th>
+<th>优势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>python标准库</td>
+<td>BeautifulSoup(html, “html.parser”)</td>
+<td>1、Python的内置标准库<br/>2、执行速度适中<br/>3、文档容错能力强</td>
+</tr>
+<tr>
+<td>lxml HTML</td>
+<td>BeautifulSoup(html, “lxml”)</td>
+<td>1.速度快<br/>2.文档容错能力强</td>
+</tr>
+<tr>
+<td>lxml XML</td>
+<td>BeautifulSoup(html, [“lxml”, “xml”]) BeautifulSoup(html, “xml”)</td>
+<td>1.速度快<br/>2.唯一支持XML的解析器</td>
+</tr>
+<tr>
+<td>html5lib</td>
+<td>BeautifulSoup(html, “html5lib”)</td>
+<td>1.做好的容错性 <br/>2.以浏览器的方式解析文档 <br/>3.生成HTML5的文档</td>
+</tr>
+</tbody>
+</table>
+<p>注意：默认解析器情况下，BeautifulSoup会将当前文档作为HTML格式解析，如果要解析XML文档，需要指定"xml"解析器</p>
+<ol start="2">
+<li>从bs对象中提取数据</li>
+</ol>
+<ul>
+<li>
+<p>find(标签,属性=值)</p>
+</li>
+<li>
+<p>find_all(标签,属性=值)，对象为一个元素，多个元素会报错</p>
+</li>
+</ul>
 
 
 
