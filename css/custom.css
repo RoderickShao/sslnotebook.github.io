@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'LXGW WenKai';
+  src: url('../fonts/LXGWWenKai-Regular.ttf') format('truetype');
+}
+body {
+  font-family: 'LXGW WenKai', sans-serif;
+}
