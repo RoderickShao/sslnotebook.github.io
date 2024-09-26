@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8/5%20Geometry/">
+        <link rel="prev" href="../../%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8/6%20Ray%20tracing/">
       
       
-        <link rel="next" href="../Splay%20Tree%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%AF%81%E6%98%8E/">
+        <link rel="next" href="../Lecture%202/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lecture-1" class="md-skip">
+        <a href="#1-avl-trees-and-splay-trees" class="md-skip">
           Skip to content
         </a>
       
@@ -805,6 +805,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8/6%20Ray%20tracing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Ray tracing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -977,11 +998,137 @@
   
   
     <li class="md-nav__item">
-      <a href="../Splay%20Tree%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%AF%81%E6%98%8E/" class="md-nav__link">
+      <a href="../Lecture%202/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    补充1
+    2 Lecture 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lecture%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Lecture 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lecture%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 Lecture 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机组成
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/Lecture%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Lecture 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/Lecture%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 Lecture 2
   </span>
   
 
@@ -1102,7 +1249,7 @@
   
 
 
-<h1 id="lecture-1"><strong>Lecture 1</strong><a class="headerlink" href="#lecture-1" title="Permanent link">&para;</a></h1>
+<h1 id="1-avl-trees-and-splay-trees"><strong>1 AVL trees and Splay trees</strong><a class="headerlink" href="#1-avl-trees-and-splay-trees" title="Permanent link">&para;</a></h1>
 <h2 id="11-avl-trees"><strong>1.1 AVL trees</strong><a class="headerlink" href="#11-avl-trees" title="Permanent link">&para;</a></h2>
 <p><strong>目标</strong>：加速二叉树的查询速度</p>
 <p><strong>性质</strong>：</p>
@@ -1152,7 +1299,7 @@
 <li>Make <span class="arithmatex">\(T_R\)</span> the right child of the root of <span class="arithmatex">\(T_L\)</span> .</li>
 </ul>
 <p><strong>算法分析</strong></p>
-<p><a href="../Splay%20Tree%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%AF%81%E6%98%8E/">见补充1</a></p>
+<p><a href="../Splay%20Tree%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%AF%81%E6%98%8E/">见Splay Tree的时间复杂度证明</a></p>
 <h2 id="13-amortized-analysis"><strong>1.3 Amortized Analysis</strong><a class="headerlink" href="#13-amortized-analysis" title="Permanent link">&para;</a></h2>
 <p><strong>Aggregate analysis</strong></p>
 <p>Show that for all n, a sequence of n operations takes worst-case time <span class="arithmatex">\(T(n)\)</span> in total.  In the worst case, the average cost, or amortized cost, per operation is therefore <span class="arithmatex">\(T(n)/n\)</span>.</p>

@@ -11,8 +11,6 @@
       
       
       
-        <link rel="prev" href="../Lecture%201/">
-      
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>补充1 - RoderickShao's NoteBook</title>
+        <title>Splay Tree的时间复杂度证明 - RoderickShao's NoteBook</title>
       
     
     
@@ -145,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              补充1
+              Splay Tree的时间复杂度证明
             
           </span>
         </div>
@@ -798,6 +796,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%85%A5%E9%97%A8/6%20Ray%20tracing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Ray tracing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -809,19 +828,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -835,7 +852,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             高级数据结构与算法分析
@@ -867,26 +884,144 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Lecture%202/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    补充1
+    2 Lecture 2
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lecture%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Lecture 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lecture%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 Lecture 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机组成
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/Lecture%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Lecture 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/Lecture%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 Lecture 2
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -933,7 +1068,7 @@
   
 
 
-  <h1>补充1</h1>
+  <h1>Splay Tree的时间复杂度证明</h1>
 
 <p>转载<a href="https://www.cnblogs.com/Mr-Spade/p/9715203.html">伸展树（Splay）复杂度证明 - Mr_Spade - 博客园 (cnblogs.com)</a></p>
 <p>在文中我们用<span class="arithmatex">\(T\)</span>表示一棵完整的<span class="arithmatex">\(Splay\ Tree\)</span>，并（不严谨地）用<span class="arithmatex">\(|T|\)</span>表示<span class="arithmatex">\(T\)</span>这棵<span class="arithmatex">\(Splay\ Tree\)</span>的节点数目。</p>
@@ -1026,6 +1161,7 @@ O(1+∑_{i=1}^nϕ(xi)−ϕ(xi−1))
 O(1+ϕ(x_n)−ϕ(x_0))
 \]</div>
 <p>至此，我们不必关心<span class="arithmatex">\(ϕ(x_0)\)</span>的值了。此时<span class="arithmatex">\(x_n\)</span>是整棵<span class="arithmatex">\(Splay\ Tree\)</span>的根，因此<span class="arithmatex">\(ϕ(x_n)=log|T|\)</span>。我们成功的证明了一次伸展操作的摊还代价为<span class="arithmatex">\(O(log|T|)\)</span>。</p>
+<p><a href="../Lecture%201/"><span class="arithmatex">\(\Leftarrow\)</span> 返回Lecture1</a></p>
 
 
 

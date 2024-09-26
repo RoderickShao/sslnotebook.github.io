@@ -817,6 +817,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#24-shadows" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Shadows
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -880,6 +889,27 @@
   
   <span class="md-ellipsis">
     5 Geometry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6%20Ray%20tracing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6 Ray tracing
   </span>
   
 
@@ -959,11 +989,137 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/Splay%20Tree%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%AF%81%E6%98%8E/" class="md-nav__link">
+      <a href="../../%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/Lecture%202/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    补充1
+    2 Lecture 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/Lecture%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Lecture 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/Lecture%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 Lecture 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机组成
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/Lecture%201/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Lecture 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/Lecture%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 Lecture 2
   </span>
   
 
@@ -1045,6 +1201,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-shadows" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Shadows
+    </span>
+  </a>
   
 </li>
       
@@ -1168,6 +1333,39 @@
 <li>we do not sort the triangles, we just need to get the minimum depth</li>
 </ul>
 <p>If different triangles do not have pixels on the same depth, the result is independent with the drawing orders.</p>
+<h2 id="24-shadows">2.4 Shadows<a class="headerlink" href="#24-shadows" title="Permanent link">&para;</a></h2>
+<p>—— shadow mapping</p>
+<p>An Image-space Algorithm (在生成阴影这一步不需要知道几何信息)</p>
+<ul>
+<li>no knowledge of scene’s geometry during shadow  computation  </li>
+<li>must deal with <strong>aliasing</strong> artifacts</li>
+</ul>
+<p><strong>Key idea</strong>:</p>
+<ul>
+<li>the points NOT in shadow must be seen both <strong>by the light</strong> and <strong>by the camera</strong> (只能处理点光源)</li>
+</ul>
+<p><strong>步骤</strong>：</p>
+<ul>
+<li>1 Render from light</li>
+</ul>
+<p>Depth image from light source</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-13%20210057.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-13%20210057.png" /></a></p>
+<ul>
+<li>2A Render from Eye</li>
+</ul>
+<p>Standard image (with depth) from eye</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-13%20225411.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-13%20225411.png" /></a></p>
+<ul>
+<li>2B Project to light</li>
+</ul>
+<p>Project visible points in eye view back to light source</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-13%20233036.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-13%20233036.png" /></a><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-13%20233044.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-13%20233044.png" /></a></p>
+<p>左图说明这个点是可见的，因为从相机到这个点的深度与眼睛看到的点反射线对应到相机的深度相同，而右图相机在这条线上的深度比眼睛看到的点反射线对应到相机的深度要浅。</p>
+<p>总的来说就是在虚拟相机的位置生成一张深度图，然后再眼睛的方向观察某个点测得其到摄像机的距离，然后找到深度图对应的深度，比较即得到阴影的位置。</p>
+<p>但是因为关于浮点数的精度问题会导致阴影边缘并不清晰，我们可以改进为大于，或者大于并且大于某个稍大的值，但这些都不能解决本质问题。</p>
+<p><strong>Hard shadows v.s. soft shadows</strong></p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-19%20203527.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-19%20203527.png" /></a><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-19%20203531.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-19%20203531.png" /></a></p>
+<p>软阴影只有再光源有大小的时候才可能出现，阴影的亮度与看到的光源的大小有关。</p>
 
 
 
