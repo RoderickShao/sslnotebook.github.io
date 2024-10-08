@@ -14,7 +14,7 @@
         <link rel="prev" href="../5%20Geometry/">
       
       
-        <link rel="next" href="../../%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/Lecture%201/">
+        <link rel="next" href="../7%20Materials%20and%20Appearances/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -163,6 +163,43 @@
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     
     
       <div class="md-header__source">
@@ -926,12 +963,117 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="6.4 Basic radiometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-radiant-energy-and-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.1 Radiant Energy and Flux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-radiant-intensity-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.2 Radiant Intensity (I)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643-irradiance-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.3 Irradiance (E)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#644-radiance-l" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.4 Radiance (L)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#645-rendering-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.5 Rendering equation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-monte-carlo-path-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Monte Carlo Path Tracing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Monte Carlo Path Tracing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#651-monte-carlo-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.1 Monte Carlo Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#652-path-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.2 Path Tracing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7%20Materials%20and%20Appearances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7 Materials and Appearances
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1147,6 +1289,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/Lecture%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 Lecture 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1246,6 +1409,90 @@
       6.4 Basic radiometry
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="6.4 Basic radiometry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-radiant-energy-and-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.1 Radiant Energy and Flux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-radiant-intensity-i" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.2 Radiant Intensity (I)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643-irradiance-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.3 Irradiance (E)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#644-radiance-l" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.4 Radiance (L)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#645-rendering-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.5 Rendering equation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-monte-carlo-path-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Monte Carlo Path Tracing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Monte Carlo Path Tracing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#651-monte-carlo-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.1 Monte Carlo Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#652-path-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.2 Path Tracing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1410,18 +1657,18 @@
 </ul>
 <p>Perform lighting calculations in a physically correct manner. </p>
 <p>以更加准确的方法定义光线，以获得更好的结果</p>
-<p><strong>Radiant Energy and Flux</strong></p>
+<h3 id="641-radiant-energy-and-flux"><strong>6.4.1 Radiant Energy and Flux</strong><a class="headerlink" href="#641-radiant-energy-and-flux" title="Permanent link">&para;</a></h3>
 <p>Definition: <strong>Radiant energy</strong> is the energy of electromagnetic  radiation. It is measured in units of joules, and denoted by  the symbol: </p>
 <div class="arithmatex">\[
 Q[J=Joule]
 \]</div>
-<p>Definition: <strong>Radiant flux</strong> (power) is the energy emitted,  reflected, transmitted or received, per unit time.</p>
+<p>Definition: <strong>Radiant flux</strong> (<strong>power</strong>) is the energy emitted,  reflected, transmitted or received, per unit time.</p>
 <div class="arithmatex">\[
 \Phi \equiv \frac{dQ}{dt}[W=Watt][lm=lumen]^*
 \]</div>
 <p>Flux - #photons flowing through through a sensor in unit time</p>
 <p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-22%20230503.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-22%20230503.png" /></a></p>
-<p><strong>Radiant Intensity</strong></p>
+<h3 id="642-radiant-intensity-i"><strong>6.4.2 Radiant Intensity (I)</strong><a class="headerlink" href="#642-radiant-intensity-i" title="Permanent link">&para;</a></h3>
 <p>Definition: The radiant (luminous) intensity is the power per unit  solid angle (立体角) emitted by a point light source.</p>
 <div class="arithmatex">\[
 I(\omega) \equiv\frac{d \Phi}{d \omega}
@@ -1447,6 +1694,230 @@ I(\omega) \equiv\frac{d \Phi}{d \omega}
 </blockquote>
 <p>Isotropic Point Source</p>
 <p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-22%20232959.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-22%20232959.png" /></a></p>
+<h3 id="643-irradiance-e"><strong>6.4.3 Irradiance (E)</strong><a class="headerlink" href="#643-irradiance-e" title="Permanent link">&para;</a></h3>
+<p>Definition: The irradiance is the power per (perpendicular/<strong>projected</strong>) unit area incident on a surface point.</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-27%20215749.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-27%20215749.png" /></a>
+$$
+E(\pmb x)\equiv \frac{d\Phi(\pmb x)}{dA}
+$$</p>
+<div class="arithmatex">\[
+[\frac{W}{m^2}][\frac{lm}{m^2}=lux]
+\]</div>
+<p>注意是投影方向上的光强，所以要乘上一个cos值（Lambert’s Cosine Law)，引入Irradiance这个概念后，我们可以更好地理解之前所说的光随着距离而衰弱的问题，Intensity并未减小，而是Irradiance减小了。</p>
+<h3 id="644-radiance-l"><strong>6.4.4 Radiance (L)</strong><a class="headerlink" href="#644-radiance-l" title="Permanent link">&para;</a></h3>
+<p>Radiance is the fundamental field quantity that describes the distribution of light in an environment （展示光在环境中辐射的特性）</p>
+<p>Definition: The radiance (luminance) is the power <strong>emitted, reflected, transmitted or received</strong> by a surface, <strong>per unit solid angle</strong>, <strong>per projected unit area</strong>. (单位投影面积单位立体角辐射出去的能量)</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-27%20224407.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-27%20224407.png" /></a></p>
+<p>根据之前Irradiance与Intensity的定义，我们也可以定义Radiance为单位立体角的Irradiance以及单位投影面积的Intensity</p>
+<p><strong>Incident Radiance</strong></p>
+<p>Incident radiance is the irradiance per unit solid angle arriving at the surface. </p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20131930.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20131930.png" /></a></p>
+<p>radiance相比于irradiance具有方向性，单位面积上某个角度光辐射的能量</p>
+<p><strong>Exiting Radiance</strong></p>
+<p>Exiting surface radiance is the intensity per unit projected area leaving the surface. </p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20132939.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20132939.png" /></a></p>
+<h3 id="645-rendering-equation"><strong>6.4.5 Rendering equation</strong><a class="headerlink" href="#645-rendering-equation" title="Permanent link">&para;</a></h3>
+<p>Differential irradiance incoming: <span class="arithmatex">\(dE(\omega_i)=L(\omega_i)cos\theta_i\ d\omega_i\)</span></p>
+<p>Differential radiance exiting (due to <span class="arithmatex">\(dE(\omega_i)\)</span>): <span class="arithmatex">\(dL_r(\omega_r)\)</span></p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20155105.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20155105.png" /></a></p>
+<p><strong>Bidirectional Reflectance Distribution Function (BRDF)</strong></p>
+<p>The Bidirectional Reflectance Distribution Function (BRDF) represents how much light is reflected into each outgoing direction <span class="arithmatex">\(\omega_r\)</span> from each incoming direction </p>
+<div class="arithmatex">\[
+f_r(\omega_i \rightarrow \omega_r)=\frac{dL_r(\omega_r)}{dE_i(\omega_i)}=\frac{dL_r(\omega_r)}{L_i(\omega_i)cos\theta_i \ d\omega_i}[\frac{1}{sr}]
+\]</div>
+<p>BRDF指的是从<span class="arithmatex">\(\omega_i\)</span>入射的光的irradiance反射从<span class="arithmatex">\(\omega_r\)</span>出去分配有有多少radiance。那么相机在<span class="arithmatex">\(\omega_r\)</span>处所观察到的irradiance就是所有方向打到该面积反射后的反射光irradiance的线性叠加，得到下面的式子。</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20160258.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20160258.png" /></a></p>
+<p>如果物体本身也发光，那么我们可以增加<span class="arithmatex">\(L_e(p,\omega_o)\)</span>来代表物体发出的radiance。然后又因为cos为负数时光线会被遮挡，所以只考虑上半球面，接着用法向量与方向向量的乘积代表相应的余弦值，这样我们可以得到。</p>
+<div class="arithmatex">\[
+L_r(p,\omega_r)=L_e(p,\omega_o)+\int_{\Omega^+}f_r(p,\omega_i\rightarrow \omega_r)L_i(p,\omega_r)\ (n\cdot\omega_i) \ d\omega_i
+\]</div>
+<p>同时我们也注意到 Reflected radiance depends on incoming radiance， But incoming radiance depends on reflected radiance (at another point in the scene)</p>
+<div class="arithmatex">\[
+L_r(x,\omega_r)=L_e(x,\omega_r)+\int_{\Omega}L_r(x',-\omega_i)f(x,\omega_i\rightarrow \omega_r)\ cos\theta_i \ d\omega_i
+\]</div>
+<p>这样我们可以解一个积分方程 （第二类Fredholm 积分方程）</p>
+<div class="arithmatex">\[
+I(u)=e(u)+\int I(v)K(u,v)dv
+\]</div>
+<p>然后构建一个线性算子<span class="arithmatex">\(K\)</span>意为反射一次的过程，上式就变为<span class="arithmatex">\(L=E+KL\)</span></p>
+<div class="arithmatex">\[
+\begin{align*}
+L&amp;=E+KL\\
+IL-KL&amp;=E\\
+(I-K)L&amp;=E\\
+L&amp;=(I-K)^{-1}E\\
+L&amp;=(I+K+K^2+K^3+\dots)E\\
+L&amp;=E+KE+K^2E+K^3E+\dots
+\end{align*}
+\]</div>
+<p>对这个式子进行物理意义进行解释：<span class="arithmatex">\(E\)</span> 为直接从光源发出的光，<span class="arithmatex">\(KE\)</span> 就是光源直接照到物体表面进入眼睛的光，其余的都是间接光照，经过几次反射得到的结果。</p>
+<h2 id="65-monte-carlo-path-tracing"><strong>6.5 Monte Carlo Path Tracing</strong><a class="headerlink" href="#65-monte-carlo-path-tracing" title="Permanent link">&para;</a></h2>
+<h3 id="651-monte-carlo-integration"><strong>6.5.1 Monte Carlo Integration</strong><a class="headerlink" href="#651-monte-carlo-integration" title="Permanent link">&para;</a></h3>
+<p>我们需要计算一个定积分：<span class="arithmatex">\(\int_a^bf(x)dx\)</span>，但是我们无法求出该函数的原函数，我们便可以通过<strong>蒙特卡洛方法</strong>求出相应的数值。</p>
+<p>怎么做呢？ estimate the integral of a function by averaging random samples of the function’s value
+$$
+Random variable: X_i\sim p(x)\
+Monte Carlo estimator: F_N=\frac{1}{N}\sum_{i=1}^N\frac{f(X_i)}{p(X_i)}
+$$</p>
+<ul>
+<li>The more samples, the less variance.</li>
+<li>Sample on x, integrate on x.</li>
+</ul>
+<h3 id="652-path-tracing"><strong>6.5.2 Path Tracing</strong><a class="headerlink" href="#652-path-tracing" title="Permanent link">&para;</a></h3>
+<p>我们之前讲了Whitted-Style Ray tracing，</p>
+<ul>
+<li>Always perform specular reflections/refraction</li>
+<li>Stop bouncing at diffuse surface</li>
+</ul>
+<p>但是上面对光线传播的简化合理吗？显然不，所以我们要逐步改进，并引入路径追踪算法</p>
+<p><strong>Problem 1</strong>: 看下图中两个茶壶，左边的材质更像镜子，我们认为它是specular或者pure specular；右边的材质更像金属-接近磨砂的质感，我们认为它是glossy的材质。那如果应用Whitted-Style ray tracing,那么是不是只有左边的茶壶显示正确，右边的不对呢？右边的茶壶之所以看起来是雾面的，是因为光线打到茶壶表面，不仅仅只是沿着镜面反射方向反射，而是会反射到镜面反射方向<strong>周围</strong>的一个区域-它多少会有些粗糙程度，这是Whitted-Style 会出问题的地方</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20210956.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20210956.png" /></a></p>
+<p><strong>Problem 2</strong>: Whitted-Style Ray Tracing 的第二个问题是，光线打到漫反射物体上就停了，但这是不对的，光线在漫发射表面仍然会反射-向四面八方反射。在这种不考虑光线漫反射的情况下，漫反射物体和漫反射物体之前的反射的光线也就无法考虑进来，那么在表现上会有哪些问题呢？看下面的例子：</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20211251.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-28%20211251.png" /></a></p>
+<p>上面两幅图描述的场景中，只有一个位于天花板上的光源，光线直接往下打。对比左右两幅图可以看到，右边的才是我们想要的结果-没有被光源直接照射的地方不应该完全是黑的，这里还有一个有意思的现象叫 color bleeding-看右边这幅图，大盒子的左面被红色的漫发射墙面反射出的光照射，显示出红色，就好像颜色 从墙面跑到了盒子的表面，这种现象被称为 Color bleeding，绿色墙面同理。<strong>Color bleeding</strong> 是全局光照带来的一种效果，是Whitted-Style ray-tracing 做不到的。</p>
+<p>由于我们之前的渲染方程是基于物理原理推导出的。
+$$
+L_r(p,\omega_r)=L_e(p,\omega_o)+\int_{\Omega^+}f_r(p,\omega_i\rightarrow \omega_r)L_i(p,\omega_r) (n\cdot\omega_i)  d\omega_i
+$$
+我们现在需要解决上述方程的半球面积分以及递归的过程，但是我们只需要数值解，所以可以用到蒙特卡洛方法。</p>
+<p><strong>A Simple Monte Carlo Solution</strong></p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20134708.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20134708.png" /></a></p>
+<p>我们考虑简单情况，即上图简单情形下的一个点的直接光照。这个场景中有一个较大的面光源，<span class="arithmatex">\(\omega_0\)</span>为观测方向，<span class="arithmatex">\(\omega_i\)</span>为各个不同的入射方向。</p>
+<p>我们假设这个点本身不发光，那么它的直接光照结果来自四面八方的热射光，于是我们直接应用反射方程：</p>
+<div class="arithmatex">\[
+L_o(p,\omega_r)=\int_{\Omega^+}f_r(p,\omega_i\rightarrow \omega_r)L_i(p,\omega_r)\ (n\cdot\omega_i) \ d\omega_i
+\]</div>
+<p>我们利用蒙特卡洛方法求解这个半球上的积分。</p>
+<p>被积函数：<span class="arithmatex">\(L_i(p,\omega_i)\ f_r(p,\omega_i,\omega_o)(n\cdot\omega_i)\)</span></p>
+<p>probability distribution function (pdf) : <span class="arithmatex">\(p(\omega_i)=1/2\pi\)</span> </p>
+<p>于是积分式可以近似地写成：
+$$
+\begin{align<em>}
+L_o(p,\omega_r)&amp;=\int_{\Omega^+}f_r(p,\omega_i\rightarrow \omega_r)L_i(p,\omega_r) (n\cdot\omega_i)  d\omega_i\
+&amp;\approx\frac{1}{N}\sum_{i=1}^{N}\frac{L_i(p,\omega_i) f_r(p,\omega_i,\omega_o)(n\cdot\omega_i)}{p(\omega_i)}
+\end{align</em>}
+$$
+这样我们就可以有一个算法，得到任意一个点出射的radiance是多少</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>shade(p, wo)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    Randomly choose N directions wi~pdf
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    Lo = 0.0
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    For each wi
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        Trace a ray r(p, wi)
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        If ray r hit the light
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            Lo += (1 / N) * L_i * f_r * cosine / pdf(wi)
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    Return Lo
+</code></pre></div>
+<p>Global Illumination (全局光照)</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20140355.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20140355.png" /></a></p>
+<p>如果打到的不是光源（上述方程只考虑了打到光源的情况），打到了Q点，我们只需要利用Q在此方向上的radiance</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>shade(p, wo)
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    Randomly choose N directions wi~pdf
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    Lo = 0.0
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    For each wi
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        Trace a ray r(p, wi)
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        If ray r hit the light
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            Lo += (1 / N) * L_i * f_r * cosine / pdf(wi)
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        Else If ray r hit an object at q
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            Lo += (1 / N) * shade(q, -wi) * f_r * cosine / pdf(wi)
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    Return Lo
+</code></pre></div>
+<p>但是这个方法亦存在问题</p>
+<p>Problem 1: <strong>Explosion</strong> of #rays as #bounces go up:</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20140941.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20140941.png" /></a></p>
+<p>key observation: #rays will not explode if N=1.于是我们可以仅仅随机选取一个方向（N代表的是蒙特卡洛积分中的采样次数）</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>shade(p, wo)
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    Randomly choose ONE direction wi~pdf(w)
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    Trace a ray r(p, wi)
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    If ray r hit the light
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        Return L_i * f_r * cosine / pdf(wi)
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    Else If ray r hit an object at q
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        Return shade(q, -wi) * f_r * cosine / pdf(wi)
+</code></pre></div>
+<p>N=1 的时候就称为Path tracing（路径追踪）</p>
+<p>但是N=1的时候，得到的结果会不精确，我们可以trace more paths through each pixel and average their radiance</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20142712.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20142712.png" /></a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ray_generation(camPos, pixel)
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    Uniformly choose N sample positions within the pixel
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    pixel_radiance = 0.0
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    For each sample in the pixel
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        Shoot a ray r(camPos, cam_to_sample)
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        If ray r hit the scene at p
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>            pixel_radiance += 1 / N * shade(p, sample_to_cam)
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    Return pixel_radiance
+</code></pre></div>
+<p>Problem 2: The recursive algorithm will never stop!</p>
+<p>由于在现实中光线确实会一直反射，如果减少弹射次数会减少到达像素的能量，而计算机并不能无限制地计算光线弹射，为了解决这一个问题，我们用俄罗斯轮盘赌的概率思想，<strong>以一定的概率来停止光线继续传播</strong>。</p>
+<p>之前的做法：我们总是将光线打在着色点上，并计算出着色结果<span class="arithmatex">\(L_o\)</span>，现在我们可以人为设定一个概率P（0&lt;P&lt;1）以一定的概率P，打出一根光线，并返回结果: <span class="arithmatex">\(\frac{L_o}{P}\)</span>, 以概率 1-P，不打出光线，那么此时便返回 0, 这样做，我们依然可以保证期望的着色结果是<span class="arithmatex">\(L_o\)</span></p>
+<div class="arithmatex">\[
+E=P∗(L_o/P)+(1−P)∗0=L_o
+\]</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>shade(p, wo)
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    Manually specify a probability P_RR
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    Randomly select ksi in a uniform dist. in [0, 1]
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    If (ksi &gt; P_RR) return 0.0;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    Randomly choose ONE direction wi~pdf(w)
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    Trace a ray r(p, wi)
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    If ray r hit the light
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        Return L_i * f_r * cosine / pdf(wi) / P_RR
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    Else If ray r hit an object at q
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        Return shade(q, -wi) * f_r * cosine / pdf(wi) / P_RR
+</code></pre></div>
+<p>上述方法是一个正确的路径追踪算法，但是它并不高效。</p>
+<p>SSP: samples per pixel (就是一个像素点打出多少光线)</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20144919.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20144919.png" /></a></p>
+<p>Sampling the Light</p>
+<p>我们之前的算法是均匀地打出光线的，是否碰到光源全凭运气。如果光源比较小的情况（比如第三幅图）我们每50000条光线才能打到光源，这样会造成很大的浪费。当然为避免这种浪费，我们可以改变蒙特卡洛方法中的pdf。</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20145242.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20145242.png" /></a></p>
+<p>如果我们可以对光源进行均匀采样 
+$$
+pdf=\frac{1}{A}(because \int pdf dA=1)
+$$
+渲染方程的积分域是在立体角上，而蒙特卡洛积分要求 采样是在积分域上进行，所以如果我们想要继续使用蒙特卡洛方法，就得重新写一下渲染方程，使其积分域是在光源上，这个也是可以办到的，只需要知道dA和dw的关系</p>
+<p><a class="glightbox" href="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20183144.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-09-29%20183144.png" /></a>
+$$
+d\omega = \frac{dA cos\theta'}{||x'-x||^2}
+$$
+这样我们可以重写渲染方程
+$$
+\begin{align<em>}
+L_o(x,\omega_o)&amp;=\int_{\Omega^+}L_i(x,\omega_i)f_r(x,\omega_i,\omega_o)cos\theta d\omega_i\
+&amp;=\int_AL_i(x,\omega_i)f_r(x,\omega_i,\omega_o)\frac{cos\theta cos\theta'}{||x'-x||^2}dA
+\end{align</em>}
+$$
+Previously, we assume the light is “accidentally” shot by uniform hemisphere sampling </p>
+<p>Now we consider the radiance coming from two parts: </p>
+<ol>
+<li>
+<p>light source (direct, no need to have RR) </p>
+</li>
+<li>
+<p>other reflectors (indirect, RR)</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>shade(p, wo)
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    # Contribution from the light source.
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    Uniformly sample the light at x’ (pdf_light = 1 / A)
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    L_dir = L_i * f_r * cos θ * cos θ’ / |x’ - p|^2 / pdf_light 
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    # Contribution from other reflectors.
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    L_indir = 0.0
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    Test Russian Roulette with probability P_RR
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    Uniformly sample the hemisphere toward wi (pdf_hemi = 1 / 2pi)
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    Trace a ray r(p, wi)
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    If ray r hit a non-emitting object at q
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        L_indir = shade(q, -wi) * f_r * cos θ / pdf_hemi / P_RR
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    Return L_dir + L_indir
+</code></pre></div>
+<p>还有一个问题就是计算光源贡献的时候还需要计算光线是否被<strong>遮挡</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a># Contribution from the light source.
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>L_dir = 0.0
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Uniformly sample the light at x’ (pdf_light = 1 / A)
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Shoot a ray from p to x’
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>If the ray is not blocked in the middle
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    L_dir = …
+</code></pre></div>
 
 
 
