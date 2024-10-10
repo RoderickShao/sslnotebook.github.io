@@ -1,5 +1,5 @@
 # 这是RoderickShao的笔记仓库
 
-main分支放的是网站的各种markdown源文件以及一些图片
+master分支放的是网站的各种markdown源文件以及一些图片
 
 gh-pages分支放的是生成网站的相关文件
